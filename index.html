@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vektor.Works — Owner’s Representative & Capital Project Management</title>
+  <meta name="description" content="Vektor.Works — Owner's Representative and Capital Project Management. The only experts on site with a singular focus: protecting your investment.">
+  <link rel="canonical" href="https://www.vektor.works/">
+  <meta property="og:site_name" content="Vektor.Works">
+  <meta property="og:title" content="Vektor.Works — Your Capital, Defended">
+  <meta property="og:description" content="Owner-aligned capital project management. Built on Tesla Gigafactory discipline.">
+  <meta property="og:url" content="https://www.vektor.works/">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --blue: #0291cf; --blue-dark: #0278ac; --blue-dim: rgba(2,145,207,0.12);
+  --grey: #4a4a4a; --grey-light: #6a6a6a; --black: #0d0d0d;
+  --off-black: #141414; --dark: #1a1a1a; --steel: #222;
+  --white: #f2f2f2; --text-dim: #888; --text-muted: #555;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--white); font-family: 'Roboto', sans-serif; font-weight: 300; overflow-x: hidden; }
+
+/* HERO */
+.hero { overflow-x: hidden; position: relative; height: calc(90vh - 64px); min-height: 540px; display: flex; align-items: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: #060d16; overflow: hidden; }
+.hero-sky { position: absolute; inset: 0; background: linear-gradient(175deg, #071524 0%, #090e18 40%, #0e1318 70%, #0d0d0d 100%); animation: skyShift 20s ease-in-out infinite alternate; }
+@keyframes skyShift { 0%{filter:brightness(1)} 100%{filter:brightness(1.07)} }
+.drone-lines { position: absolute; inset: 0; overflow: hidden; }
+.drone-line { position: absolute; background: linear-gradient(to right, transparent, rgba(2,145,207,0.22), transparent); height: 1px; width: 120%; left: -10%; animation: flyLine linear infinite; opacity: 0; }
+.drone-line:nth-child(1){top:12%;animation-delay:0s;animation-duration:3.2s}
+.drone-line:nth-child(2){top:28%;animation-delay:0.6s;animation-duration:2.8s}
+.drone-line:nth-child(3){top:45%;animation-delay:1.2s;animation-duration:3.5s}
+.drone-line:nth-child(4){top:62%;animation-delay:1.8s;animation-duration:2.6s}
+.drone-line:nth-child(5){top:78%;animation-delay:0.4s;animation-duration:3.8s}
+.drone-line:nth-child(6){top:20%;animation-delay:2.1s;animation-duration:2.9s}
+.drone-line:nth-child(7){top:55%;animation-delay:2.8s;animation-duration:3.1s}
+.drone-line:nth-child(8){top:88%;animation-delay:1.5s;animation-duration:2.4s}
+@keyframes flyLine { 0%{transform:translateX(-20%) scaleX(0);opacity:0} 15%{opacity:1} 85%{opacity:1} 100%{transform:translateX(20%) scaleX(1.2);opacity:0} }
+.hero-silhouette { position: absolute; bottom: 0; left: 0; right: 0; height: 55%; animation: citySway 24s ease-in-out infinite; }
+.hero-silhouette svg { width: 100%; height: 100%; }
+.hero-glow { position: absolute; bottom: 20%; left: 50%; transform: translateX(-50%); width: 80%; height: 300px; background: radial-gradient(ellipse at center, rgba(2,145,207,0.07) 0%, transparent 70%); pointer-events: none; animation: glowPulse 8s ease-in-out infinite; }
+.hero-scanlines { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px); pointer-events: none; }
+.particles { position: absolute; inset: 0; overflow: hidden; }
+.particle { position: absolute; border-radius: 50%; background: var(--blue); animation: drift linear infinite; opacity: 0; }
+@keyframes drift { 0%{transform:translate(0,0);opacity:0} 10%{opacity:0.5} 90%{opacity:0.2} 100%{transform:translate(var(--dx),var(--dy));opacity:0} }
+.hero-content { position: relative; z-index: 10; padding: 0 48px 52px; max-width: 860px; }
+.hero-eyebrow { font-family: 'Roboto Condensed', sans-serif; font-weight: 400; font-size: 0.75rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 20px; opacity: 0; animation: fadeUp 0.8s 0.3s forwards; }
+.hero-title { font-family: 'Roboto Condensed', sans-serif; font-weight: 900; font-size: clamp(3.2rem, 8vw, 6.5rem); line-height: 0.95; letter-spacing: -0.01em; color: var(--white); margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s 0.5s forwards; }
+.hero-title em { font-style: normal; color: var(--blue); }
+.hero-subtitle { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 1.1rem; line-height: 1.65; color: rgba(242,242,242,0.6); max-width: 520px; margin-bottom: 40px; opacity: 0; animation: fadeUp 0.8s 0.7s forwards; }
+.hero-actions { display: flex; gap: 16px; opacity: 0; animation: fadeUp 0.8s 0.9s forwards; }
+.btn-primary { font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; background: var(--blue); color: #fff; padding: 14px 32px; text-decoration: none; transition: background 0.2s, transform 0.2s; display: inline-block; }
+.btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+.btn-ghost { font-family: 'Roboto Condensed', sans-serif; font-weight: 400; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; border: 1px solid rgba(242,242,242,0.3); color: var(--white); padding: 14px 32px; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+.btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
+.scroll-indicator { position: absolute; bottom: 32px; right: 48px; display: flex; align-items: center; gap: 12px; opacity: 0; animation: fadeIn 1s 1.5s forwards; }
+.scroll-indicator span { font-family: 'Roboto Condensed', sans-serif; font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-dim); }
+.scroll-line { width: 40px; height: 1px; background: rgba(138,138,138,0.3); position: relative; overflow: hidden; }
+.scroll-line::after { content: ''; position: absolute; inset: 0; background: var(--blue); animation: scrollPulse 1.8s ease-in-out infinite; }
+@keyframes scrollPulse { 0%{transform:translateX(-100%)} 100%{transform:translateX(100%)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+/* ── CITYSCAPE DYNAMICS ── */
+@keyframes cityWin  { 0%,100%{opacity:0.08} 55%{opacity:0.95} }
+@keyframes cityBeacon { 0%,38%,62%,100%{opacity:0;r:2} 50%{opacity:1;r:4.5} }
+@keyframes glowPulse { 0%,100%{opacity:0.45} 50%{opacity:0.9} }
+@keyframes citySway  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+.city-win   { fill:rgba(2,145,207,0.95); animation:cityWin var(--dur,3.2s) var(--del,0s) ease-in-out infinite; }
+.city-win-w { fill:rgba(255,195,88,0.82); animation:cityWin var(--dur,4s)   var(--del,0s) ease-in-out infinite; }
+.city-beacon { fill:#ff3535; filter:drop-shadow(0 0 4px rgba(255,50,50,0.7)); animation:cityBeacon 2.5s var(--del,0s) ease-in-out infinite; }
+
+/* SERVICES */
+.services { padding: 50px 48px; background: var(--off-black); position: relative; }
+.services::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(2,145,207,0.35), transparent); }
+.section-label { font-family: 'Roboto Condensed', sans-serif; font-weight: 400; font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+.section-title { font-family: 'Roboto Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.0; color: var(--white); margin-bottom: 56px; letter-spacing: -0.01em; }
+.section-title em { font-style: normal; color: var(--blue); }
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+@media(max-width:900px){ .services-grid { grid-template-columns: repeat(2,1fr); } }
+.service-card { background: var(--dark); padding: 44px 34px; position: relative; overflow: hidden; cursor: pointer; transition: background 0.3s; text-decoration: none; display: block; color: inherit; }
+.service-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--blue); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+.service-card:hover { background: var(--steel); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon { width: 36px; height: 36px; margin-bottom: 18px; }
+.service-name { font-family: 'Roboto Condensed', sans-serif; font-weight: 900; font-size: 1.1rem; letter-spacing: 0.02em; color: var(--white); margin-bottom: 14px; line-height: 1.2; text-transform: uppercase; }
+.service-desc { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 0.95rem; line-height: 1.7; color: var(--text-dim); margin-bottom: 28px; }
+.service-link { font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); display: flex; align-items: center; gap: 8px; transition: gap 0.2s; }
+.service-card:hover .service-link { gap: 14px; }
+.service-link::after { content: '→'; }
+
+/* WHY VEKTOR */
+.why { padding: 50px 48px; background: var(--black); display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; position: relative; }
+@media(max-width:900px){ .why { grid-template-columns: 1fr; gap: 48px; } }
+.why::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(2,145,207,0.2), transparent); }
+.why-visual { position: relative; aspect-ratio: 4/3; }
+.why-visual-inner { position: absolute; inset: 0; overflow: hidden; }
+.why-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; filter: brightness(0.88) contrast(1.05); }
+.why-photo-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(2,145,207,0.08) 0%, transparent 60%); pointer-events: none; }
+.why-corner { position: absolute; top: 14px; left: 14px; width: 22px; height: 22px; border-top: 2px solid var(--blue); border-left: 2px solid var(--blue); z-index: 2; }
+.why-corner-br { top:auto;left:auto;bottom:14px;right:14px;border-top:none;border-left:none;border-bottom:2px solid var(--blue);border-right:2px solid var(--blue); }
+.why-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 16px; background: linear-gradient(to top, rgba(13,13,13,0.85), transparent); z-index: 2; }
+.why-caption-text { font-family: 'Roboto Condensed', sans-serif; font-weight: 400; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(242,242,242,0.5); }
+.why-content .section-title { margin-bottom: 24px; }
+.why-body { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 1rem; line-height: 1.8; color: rgba(242,242,242,0.6); margin-bottom: 18px; }
+.why-body strong { color: var(--blue); font-weight: 700; }
+.why-content .btn-primary { margin-top: 12px; }
+
+/* DEFENSE STATEMENT */
+.vk-defense-statement {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+  line-height: 1.25;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  margin: 24px 0 24px;
+  padding: 16px 20px;
+  border-left: 3px solid var(--blue);
+  background: rgba(2,145,207,0.06);
+  position: relative;
+}
+.vk-defense-statement::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, rgba(2,145,207,0.3), transparent);
+}
+
+/* CONTACT */
+.contact { padding: 50px 48px 40px; background: var(--off-black); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; position: relative; }
+@media(max-width:900px){ .contact { grid-template-columns: 1fr; gap: 48px; } }
+.contact::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(2,145,207,0.3), transparent); }
+.contact-info .section-title { margin-bottom: 20px; }
+.contact-body { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 1rem; line-height: 1.8; color: rgba(242,242,242,0.52); margin-bottom: 36px; }
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); }
+.form-group input, .form-group textarea { background: var(--dark); border: 1px solid rgba(74,74,74,0.5); color: var(--white); padding: 12px 16px; font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 0.9rem; outline: none; transition: border-color 0.2s; resize: none; }
+.form-group input:focus, .form-group textarea:focus { border-color: var(--blue); }
+.form-group textarea { height: 120px; }
+
+/* FOOTER — fixed from 100vw to 100% (matches Services page) */
+.vk-footer {
+  background: var(--off-black);
+  border-top: 1px solid rgba(2,145,207,0.15);
+  width: 100% !important; max-width: 100% !important;
+  left: auto !important; margin-left: 0 !important;
+  box-sizing: border-box; position: relative;
+  text-align: left !important;
+}
+.vk-footer-inner {
+  display: grid !important; grid-template-columns: 1fr auto auto !important;
+  gap: 40px !important; align-items: start !important;
+  padding: 32px 48px 28px !important;
+  max-width: 100% !important; width: 100% !important;
+  margin: 0 !important; text-align: left !important;
+  box-sizing: border-box !important;
+}
+.vk-footer-logo {
+  font-family: 'Roboto Condensed', sans-serif; font-weight: 900;
+  font-size: 1.1rem; letter-spacing: 0.08em; color: var(--white); margin-bottom: 8px;
+}
+.vk-footer-logo span { color: var(--blue); }
+.vk-footer-tagline {
+  font-family: 'Roboto Condensed', sans-serif; font-weight: 300;
+  font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-dim);
+}
+.vk-footer-links, .vk-footer-contact {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.vk-footer-links a, .vk-footer-contact a {
+  font-family: 'Roboto Condensed', sans-serif !important; font-weight: 300 !important;
+  font-size: 0.88rem !important; letter-spacing: 0.1em !important;
+  color: rgba(242,242,242,0.5) !important; text-decoration: none !important;
+  transition: color 0.2s !important; display: block !important; text-align: left !important;
+}
+.vk-footer-links a { text-transform: uppercase; }
+.vk-footer-links a:hover, .vk-footer-contact a:hover { color: var(--blue); }
+.vk-footer-bar {
+  border-top: 1px solid rgba(74,74,74,0.3);
+  padding: 12px 48px; text-align: center !important; display: flex !important;
+  justify-content: center !important; width: 100% !important; clear: both;
+}
+.vk-footer-bar span {
+  font-family: 'Roboto Condensed', sans-serif; font-weight: 300;
+  font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(242,242,242,0.25);
+}
+
+/* ════ MOBILE ════ */
+@media (max-width: 768px) {
+  .hero {
+    height: calc(92vh - 64px); min-height: 500px;
+    position: relative !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+  .hero-bg {
+    position: absolute !important;
+    left: 0 !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .hero-content { padding: 0 20px 44px; }
+  .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.18em; }
+  .hero-title { font-size: clamp(2.6rem, 14vw, 3.6rem); }
+  .hero-subtitle { font-size: 0.95rem; }
+  .hero-actions { flex-direction: column; gap: 10px; }
+  .btn-primary, .btn-ghost { width: 100%; text-align: center; padding: 14px 20px; }
+  .scroll-indicator { display: none; }
+
+  .services { padding: 40px 20px; }
+  .services-grid { grid-template-columns: 1fr !important; }
+  .service-card { padding: 32px 24px; }
+
+  .why { padding: 40px 20px; grid-template-columns: 1fr !important; gap: 32px; }
+  .why-visual { aspect-ratio: 16/9; }
+
+  .contact { padding: 40px 20px; grid-template-columns: 1fr !important; gap: 32px; }
+  .form-row { grid-template-columns: 1fr !important; }
+
+  .section-title { font-size: clamp(1.8rem, 8vw, 2.6rem); }
+}
+
+/* ── FULL BLEED ── */
+.vk-about, .vs-wrap, .hero,
+.services, .why, .contact,
+.vk-hero, .vk-timeline, .vk-quote, .vk-mission, .vk-stats, .vk-contact,
+.vs-hero, .vs-phase, .vs-feature, .vs-cta {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  position: relative;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  box-sizing: border-box !important;
+}
+
+/* ═══ NAV ═══ */
+.vk-nav {
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(13,13,13,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(2,145,207,0.15);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 64px;
+  width: 100vw !important; max-width: 100vw !important;
+  left: 50% !important; margin-left: -50vw !important;
+  box-sizing: border-box;
+}
+.vk-nav-logo {
+  font-family: 'Roboto Condensed', sans-serif; font-weight: 900;
+  font-size: 1.05rem; letter-spacing: 0.08em;
+  color: var(--white); text-decoration: none;
+}
+.vk-nav-logo span { color: var(--blue); }
+.vk-nav-links { display: flex; align-items: center; gap: 36px; }
+.vk-nav-links a {
+  font-family: 'Roboto Condensed', sans-serif; font-weight: 400;
+  font-size: 0.85rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(242,242,242,0.65); text-decoration: none;
+  transition: color 0.2s;
+}
+.vk-nav-links a:hover { color: var(--white); }
+.vk-nav-cta {
+  background: var(--blue) !important; color: #fff !important;
+  padding: 9px 22px !important; font-weight: 700 !important;
+  transition: background 0.2s !important;
+}
+.vk-nav-cta:hover { background: var(--blue-dark) !important; }
+.vk-nav-burger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.vk-nav-burger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--white); transition: all 0.3s;
+}
+.vk-nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.vk-nav-burger.open span:nth-child(2) { opacity: 0; }
+.vk-nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ═══ NAV + FOOTER MOBILE ═══ */
+@media (max-width: 768px) {
+  .vk-nav {
+    padding: 0 20px;
+    left: 0 !important; margin-left: 0 !important; width: 100% !important;
+  }
+  .vk-nav-links {
+    display: none; flex-direction: column; gap: 0;
+    position: absolute; top: 64px; left: 0; right: 0;
+    background: rgba(13,13,13,0.98);
+    border-bottom: 1px solid rgba(2,145,207,0.15);
+    padding: 16px 0;
+  }
+  .vk-nav-links.open { display: flex; }
+  .vk-nav-links a {
+    padding: 14px 24px; width: 100%;
+    border-bottom: 1px solid rgba(74,74,74,0.2);
+  }
+  .vk-nav-links a:last-child { border-bottom: none; }
+  .vk-nav-cta { margin: 8px 20px !important; padding: 12px 20px !important; text-align: center; }
+  .vk-nav-burger { display: flex; }
+
+  /* Footer mobile — matches Services page exactly */
+  .vk-footer-inner {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 40px 20px 32px !important;
+  }
+  .vk-footer-bar { padding: 16px 20px !important; }
+}
+
+.sqs-block-code,
+.sqs-block-code .sqs-block-content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+.vk-nav {
+  margin-top: 0 !important;
+  top: 0 !important;
+}
+
+/* ── ACTIVE NAV STATE ── */
+.vk-nav-link[data-active] { color: var(--white) !important; }
+.vk-nav-link[data-active]::after { content: ''; display: block; height: 2px; background: var(--blue); margin-top: 2px; }
+.vk-nav-link { position: relative; }
+.vk-nav-link::after { content: ''; display: block; height: 2px; background: transparent; margin-top: 2px; transition: background 0.2s; }
+.vk-nav-link:hover::after { background: rgba(2,145,207,0.5); }
+
+/* ── SCROLL TO TOP ── */
+.vk-scroll-top {
+  position: fixed; bottom: 32px; right: 32px; z-index: 999;
+  width: 44px; height: 44px; background: var(--blue);
+  border: none; cursor: pointer; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transform: translateY(12px);
+  transition: opacity 0.3s, transform 0.3s, background 0.2s;
+  pointer-events: none;
+}
+.vk-scroll-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.vk-scroll-top:hover { background: var(--blue-dark); }
+
+/* ── FORM SUCCESS ── */
+.vk-form-success {
+  background: rgba(2,145,207,0.1); border: 1px solid rgba(2,145,207,0.3);
+  padding: 14px 18px; font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.85rem; color: var(--blue); letter-spacing: 0.06em;
+}
+
+/* ── QUOTE SECTION ── */
+.vk-quote { background: var(--off-black); padding: 52px 48px; position: relative; }
+.vk-quote::before, .vk-quote::after { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(2,145,207,0.25), transparent); }
+.vk-quote::before { top: 0; } .vk-quote::after { bottom: 0; }
+.vk-quote-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+.vk-quote-accent { display: block; width: 36px; height: 3px; background: var(--blue); margin: 0 auto 24px; }
+
+/* ── SCROLL ANIMATIONS ── */
+.vk-fade { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.vk-fade.vk-visible { opacity: 1; transform: translateY(0); }
+.vk-fade-delay-1 { transition-delay: 0.1s; }
+.vk-fade-delay-2 { transition-delay: 0.2s; }
+.vk-fade-delay-3 { transition-delay: 0.3s; }
+
+/* ── SCROLL PROGRESS BAR ── */
+.vk-progress-bar {
+  position: fixed; top: 64px; left: 0; width: 0%; height: 2px;
+  background: var(--blue); z-index: 1100;
+  transition: width 0.05s linear; pointer-events: none;
+  box-shadow: 0 0 8px rgba(2,145,207,0.6);
+}
+
+/* ── NOISE TEXTURE OVERLAY ── */
+.vk-noise-overlay {
+  position: fixed; inset: 0; pointer-events: none; z-index: 9998;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px; opacity: 0.028; mix-blend-mode: screen;
+}
+
+/* ── CONTACT SECTION GLOW ── */
+.contact { overflow: hidden !important; }
+.contact-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 0%, rgba(2,145,207,0.05), transparent 60%); pointer-events: none; }
+
+</style>
+
+<!-- ═══ VEKTOR NAV ═══ -->
+<nav class="vk-nav" id="vk-nav">
+  <a href="/" class="vk-nav-logo">VEKTOR<span>.</span>WORKS</a>
+  <div class="vk-nav-links" id="vk-nav-links">
+    <a href="/" class="vk-nav-link" data-page="home">Home</a>
+    <a href="/services" class="vk-nav-link" data-page="services">Services</a>
+    <a href="/about" class="vk-nav-link" data-page="about">About</a>
+    <a href="/#vk-contact" class="vk-nav-cta">Contact</a>
+  </div>
+  <button class="vk-nav-burger" id="vk-burger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+<div class="hero-bg">
+    <div class="hero-sky"></div>
+    <div class="drone-lines">
+      <div class="drone-line"></div><div class="drone-line"></div><div class="drone-line"></div>
+      <div class="drone-line"></div><div class="drone-line"></div><div class="drone-line"></div>
+      <div class="drone-line"></div><div class="drone-line"></div>
+    </div>
+    <div class="hero-silhouette">
+      <svg viewBox="0 0 1440 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="bGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0d1a28"/>
+            <stop offset="100%" stop-color="#0d0d0d"/>
+          </linearGradient>
+          <linearGradient id="glowG" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="rgba(2,145,207,0.09)"/>
+            <stop offset="100%" stop-color="transparent"/>
+          </linearGradient>
+          <linearGradient id="steelGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1a2a38"/>
+            <stop offset="100%" stop-color="#0d1520"/>
+          </linearGradient>
+        </defs>
+
+        <rect x="0" y="300" width="1440" height="200" fill="url(#glowG)"/>
+
+        <g fill="url(#bGrad)">
+          <rect x="20" y="390" width="55" height="110"/>
+          <rect x="85" y="368" width="42" height="132"/>
+          <rect x="138" y="345" width="75" height="155"/>
+          <rect x="225" y="375" width="48" height="125"/>
+          <rect x="285" y="305" width="95" height="195"/>
+          <rect x="392" y="335" width="58" height="165"/>
+          <rect x="462" y="365" width="38" height="135"/>
+          <rect x="536" y="205" width="7" height="295"/>
+          <rect x="440" y="205" width="105" height="5"/>
+          <rect x="495" y="210" width="3" height="75" opacity="0.5"/>
+          <rect x="594" y="295" width="175" height="205"/>
+          <rect x="635" y="255" width="58" height="40"/>
+          <rect x="652" y="145" width="16" height="150"/>
+          <rect x="780" y="145" width="13" height="150"/>
+          <rect x="782" y="315" width="118" height="185"/>
+          <rect x="814" y="283" width="48" height="32"/>
+          <rect x="914" y="342" width="88" height="158"/>
+          <rect x="1016" y="303" width="128" height="197"/>
+          <rect x="1055" y="265" width="52" height="38"/>
+          <rect x="1075" y="135" width="7" height="168"/>
+          <rect x="998" y="135" width="86" height="5"/>
+          <rect x="1035" y="140" width="3" height="58" opacity="0.5"/>
+          <rect x="1158" y="362" width="68" height="138"/>
+          <rect x="1238" y="333" width="82" height="167"/>
+          <rect x="1335" y="352" width="105" height="148"/>
+        </g>
+
+        <g fill="none" stroke="url(#bGrad)" stroke-width="0">
+          <rect x="1155" y="230" width="110" height="8" fill="#0d1a28"/>
+          <rect x="1155" y="268" width="110" height="8" fill="#0d1520"/>
+          <rect x="1155" y="306" width="110" height="8" fill="#0d1520"/>
+          <rect x="1155" y="344" width="110" height="8" fill="#0d1520"/>
+        </g>
+        <g fill="#0e1c2c">
+          <rect x="1155" y="195" width="7" height="175"/>
+          <rect x="1185" y="220" width="6" height="150"/>
+          <rect x="1215" y="220" width="6" height="150"/>
+          <rect x="1258" y="195" width="7" height="175"/>
+        </g>
+        <g fill="#0c1a28" opacity="0.95">
+          <rect x="1155" y="226" width="110" height="5"/>
+          <rect x="1155" y="264" width="110" height="5"/>
+          <rect x="1155" y="302" width="110" height="5"/>
+          <rect x="1155" y="340" width="110" height="5"/>
+          <rect x="1155" y="193" width="110" height="5"/>
+        </g>
+        <g stroke="#0e2030" stroke-width="2.5" fill="none" opacity="0.8">
+          <line x1="1162" y1="231" x2="1192" y2="269"/>
+          <line x1="1192" y1="231" x2="1162" y2="269"/>
+          <line x1="1221" y1="231" x2="1258" y2="269"/>
+          <line x1="1258" y1="231" x2="1221" y2="269"/>
+          <line x1="1162" y1="269" x2="1192" y2="307"/>
+          <line x1="1192" y1="269" x2="1162" y2="307"/>
+          <line x1="1221" y1="269" x2="1258" y2="307"/>
+          <line x1="1258" y1="269" x2="1221" y2="307"/>
+        </g>
+        <g fill="#0a1520" opacity="0.7">
+          <rect x="1155" y="185" width="60" height="12"/>
+          <rect x="1235" y="185" width="30" height="8"/>
+        </g>
+
+        <g fill="url(#bGrad)">
+          <rect x="588" y="80" width="8" height="260"/>
+        </g>
+        <g stroke="#0d1a28" stroke-width="2" fill="none">
+          <line x1="588" y1="80" x2="596" y2="130"/>
+          <line x1="596" y1="80" x2="588" y2="130"/>
+          <line x1="588" y1="130" x2="596" y2="180"/>
+          <line x1="596" y1="130" x2="588" y2="180"/>
+          <line x1="588" y1="180" x2="596" y2="230"/>
+          <line x1="596" y1="180" x2="588" y2="230"/>
+        </g>
+        <rect x="584" y="86" width="16" height="14" fill="#0d1a28"/>
+        <rect x="488" y="78" width="170" height="6" fill="#0d1a28"/>
+        <rect x="596" y="78" width="65" height="5" fill="#0d1a28"/>
+        <rect x="650" y="83" width="20" height="14" fill="#0c1520"/>
+        <g stroke="#0d1e30" stroke-width="1.5" fill="none">
+          <line x1="592" y1="72" x2="488" y2="84"/>
+          <line x1="592" y1="72" x2="658" y2="83"/>
+          <line x1="592" y1="72" x2="560" y2="84"/>
+          <line x1="592" y1="72" x2="530" y2="84"/>
+        </g>
+        <rect x="515" y="74" width="10" height="8" fill="#0c1828"/>
+        <line x1="520" y1="82" x2="520" y2="148" stroke="#0d1e30" stroke-width="1.5"/>
+        <rect x="495" y="148" width="58" height="5" fill="#0d1a28"/>
+        <rect x="495" y="145" width="58" height="3" fill="#0e2030" opacity="0.6"/>
+        <rect x="495" y="152" width="58" height="3" fill="#0e2030" opacity="0.6"/>
+        <line x1="507" y1="148" x2="520" y2="148" stroke="#0d1e30" stroke-width="1.2"/>
+        <line x1="536" y1="148" x2="520" y2="148" stroke="#0d1e30" stroke-width="1.2"/>
+
+        <g fill="url(#bGrad)">
+          <rect x="1310" y="110" width="7" height="255"/>
+        </g>
+        <g stroke="#0d1a28" stroke-width="1.8" fill="none">
+          <line x1="1310" y1="110" x2="1317" y2="155"/>
+          <line x1="1317" y1="110" x2="1310" y2="155"/>
+          <line x1="1310" y1="155" x2="1317" y2="200"/>
+          <line x1="1317" y1="155" x2="1310" y2="200"/>
+          <line x1="1310" y1="200" x2="1317" y2="245"/>
+          <line x1="1317" y1="200" x2="1310" y2="245"/>
+        </g>
+        <rect x="1307" y="116" width="14" height="12" fill="#0d1a28"/>
+        <rect x="1220" y="108" width="150" height="5" fill="#0d1a28"/>
+        <rect x="1317" y="108" width="55" height="4" fill="#0d1a28"/>
+        <rect x="1362" y="112" width="16" height="12" fill="#0c1520"/>
+        <g stroke="#0d1e30" stroke-width="1.3" fill="none">
+          <line x1="1313" y1="102" x2="1220" y2="113"/>
+          <line x1="1313" y1="102" x2="1372" y2="112"/>
+          <line x1="1313" y1="102" x2="1270" y2="113"/>
+          <line x1="1313" y1="102" x2="1310" y2="113"/>
+        </g>
+        <rect x="1245" y="104" width="9" height="7" fill="#0c1828"/>
+        <line x1="1250" y1="111" x2="1250" y2="185" stroke="#0d1e30" stroke-width="1.3"/>
+        <rect x="1234" y="185" width="34" height="4" fill="#0d1a28"/>
+        <rect x="1234" y="183" width="34" height="2" fill="#0e2030" opacity="0.5"/>
+        <line x1="1243" y1="185" x2="1250" y2="185" stroke="#0d1e30" stroke-width="1"/>
+        <line x1="1259" y1="185" x2="1250" y2="185" stroke="#0d1e30" stroke-width="1"/>
+
+        <g fill="#0b1825" opacity="0.75">
+          <rect x="594" y="295" width="4" height="205"/>
+          <rect x="614" y="295" width="4" height="205"/>
+          <rect x="634" y="295" width="4" height="205"/>
+          <rect x="594" y="310" width="44" height="3"/>
+          <rect x="594" y="340" width="44" height="3"/>
+          <rect x="594" y="370" width="44" height="3"/>
+          <rect x="594" y="400" width="44" height="3"/>
+          <rect x="594" y="430" width="44" height="3"/>
+          <rect x="594" y="460" width="44" height="3"/>
+        </g>
+        <rect x="375" y="488" width="28" height="12" rx="2" fill="#0c1828"/>
+        <rect x="410" y="490" width="18" height="10" rx="1" fill="#0c1828"/>
+        <rect x="875" y="490" width="32" height="10" rx="2" fill="#0c1828"/>
+        <rect x="915" y="488" width="20" height="12" rx="2" fill="#0c1828"/>
+        <rect x="560" y="490" width="40" height="8" fill="#0b1728"/>
+        <rect x="563" y="483" width="34" height="7" fill="#0c1828"/>
+        <rect x="566" y="477" width="28" height="6" fill="#0d1928"/>
+
+        <!-- Static accent windows (original) -->
+        <g fill="rgba(2,145,207,0.22)">
+          <rect x="610" y="315" width="6" height="4"/>
+          <rect x="623" y="315" width="6" height="4"/>
+          <rect x="636" y="315" width="6" height="4"/>
+          <rect x="610" y="327" width="6" height="4"/>
+          <rect x="796" y="328" width="5" height="3"/>
+          <rect x="808" y="328" width="5" height="3"/>
+          <rect x="1030" y="320" width="6" height="4"/>
+          <rect x="1043" y="320" width="6" height="4"/>
+          <rect x="1056" y="320" width="6" height="4"/>
+          <rect x="296" y="320" width="5" height="4"/>
+          <rect x="310" y="320" width="5" height="4"/>
+          <rect x="296" y="335" width="5" height="4"/>
+          <rect x="310" y="335" width="5" height="4"/>
+          <rect x="1025" y="335" width="5" height="3"/>
+          <rect x="1038" y="335" width="5" height="3"/>
+          <rect x="1055" y="335" width="5" height="3"/>
+          <rect x="587" y="88" width="5" height="4" opacity="0.6"/>
+          <rect x="1309" y="118" width="4" height="3" opacity="0.6"/>
+        </g>
+
+        <!-- ═══ DYNAMIC CITY LIGHTS ═══ -->
+        <!-- Building x=285 (large center-left) -->
+        <rect class="city-win" x="292" y="315" width="5" height="4"/>
+        <rect class="city-win" x="305" y="315" width="5" height="4"/>
+        <rect class="city-win" x="318" y="315" width="5" height="4"/>
+        <rect class="city-win" x="331" y="315" width="5" height="4"/>
+        <rect class="city-win" x="344" y="315" width="5" height="4"/>
+        <rect class="city-win" x="292" y="328" width="5" height="4"/>
+        <rect class="city-win" x="318" y="328" width="5" height="4"/>
+        <rect class="city-win" x="344" y="328" width="5" height="4"/>
+        <rect class="city-win" x="305" y="341" width="5" height="4"/>
+        <rect class="city-win" x="331" y="341" width="5" height="4"/>
+        <rect class="city-win-w" x="357" y="315" width="5" height="4"/>
+        <rect class="city-win-w" x="305" y="354" width="5" height="4"/>
+        <rect class="city-win-w" x="292" y="354" width="5" height="4"/>
+
+        <!-- Building x=594 (wide center tower) -->
+        <rect class="city-win" x="603" y="306" width="6" height="4"/>
+        <rect class="city-win" x="618" y="306" width="6" height="4"/>
+        <rect class="city-win" x="648" y="306" width="6" height="4"/>
+        <rect class="city-win" x="663" y="306" width="6" height="4"/>
+        <rect class="city-win" x="693" y="306" width="6" height="4"/>
+        <rect class="city-win" x="708" y="306" width="6" height="4"/>
+        <rect class="city-win" x="603" y="319" width="6" height="4"/>
+        <rect class="city-win" x="633" y="319" width="6" height="4"/>
+        <rect class="city-win" x="678" y="319" width="6" height="4"/>
+        <rect class="city-win" x="723" y="319" width="6" height="4"/>
+        <rect class="city-win" x="618" y="332" width="6" height="4"/>
+        <rect class="city-win" x="648" y="332" width="6" height="4"/>
+        <rect class="city-win" x="708" y="332" width="6" height="4"/>
+        <rect class="city-win-w" x="738" y="306" width="6" height="4"/>
+        <rect class="city-win-w" x="663" y="332" width="6" height="4"/>
+        <rect class="city-win-w" x="693" y="345" width="6" height="4"/>
+
+        <!-- Building x=782 -->
+        <rect class="city-win" x="790" y="326" width="5" height="4"/>
+        <rect class="city-win" x="803" y="326" width="5" height="4"/>
+        <rect class="city-win" x="816" y="326" width="5" height="4"/>
+        <rect class="city-win" x="829" y="326" width="5" height="4"/>
+        <rect class="city-win" x="790" y="339" width="5" height="4"/>
+        <rect class="city-win" x="842" y="339" width="5" height="4"/>
+        <rect class="city-win" x="816" y="352" width="5" height="4"/>
+        <rect class="city-win-w" x="829" y="352" width="5" height="4"/>
+
+        <!-- Building x=1016 (right-center tall) -->
+        <rect class="city-win" x="1025" y="314" width="5" height="4"/>
+        <rect class="city-win" x="1038" y="314" width="5" height="4"/>
+        <rect class="city-win" x="1051" y="314" width="5" height="4"/>
+        <rect class="city-win" x="1064" y="314" width="5" height="4"/>
+        <rect class="city-win" x="1077" y="314" width="5" height="4"/>
+        <rect class="city-win" x="1025" y="327" width="5" height="4"/>
+        <rect class="city-win" x="1051" y="327" width="5" height="4"/>
+        <rect class="city-win" x="1090" y="327" width="5" height="4"/>
+        <rect class="city-win" x="1103" y="314" width="5" height="4"/>
+        <rect class="city-win-w" x="1064" y="340" width="5" height="4"/>
+        <rect class="city-win-w" x="1090" y="340" width="5" height="4"/>
+
+        <!-- Building x=1238 (far right) -->
+        <rect class="city-win" x="1246" y="345" width="5" height="4"/>
+        <rect class="city-win" x="1259" y="345" width="5" height="4"/>
+        <rect class="city-win" x="1272" y="345" width="5" height="4"/>
+        <rect class="city-win" x="1285" y="345" width="5" height="4"/>
+        <rect class="city-win" x="1246" y="358" width="5" height="4"/>
+        <rect class="city-win-w" x="1272" y="358" width="5" height="4"/>
+        <rect class="city-win-w" x="1285" y="358" width="5" height="4"/>
+
+        <!-- Building x=1335 (rightmost) -->
+        <rect class="city-win" x="1343" y="363" width="5" height="4"/>
+        <rect class="city-win" x="1356" y="363" width="5" height="4"/>
+        <rect class="city-win" x="1369" y="363" width="5" height="4"/>
+        <rect class="city-win" x="1382" y="363" width="5" height="4"/>
+        <rect class="city-win" x="1395" y="363" width="5" height="4"/>
+        <rect class="city-win" x="1343" y="376" width="5" height="4"/>
+        <rect class="city-win" x="1369" y="376" width="5" height="4"/>
+        <rect class="city-win-w" x="1356" y="376" width="5" height="4"/>
+
+        <!-- Crane beacon lights -->
+        <circle class="city-beacon" cx="592" cy="69" r="3"/>
+        <circle class="city-beacon" cx="1313" cy="99" r="3" style="--del:1.3s"/>
+
+        <rect x="0" y="499" width="1440" height="2" fill="rgba(2,145,207,0.1)"/>
+      </svg>
+    </div>
+    <div class="hero-glow"></div>
+    <div class="hero-scanlines"></div>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Owner's Representative · Capital Project Management</div>
+    <h1 class="hero-title">Your Capital<br><em>Defended</em></h1>
+    <p class="hero-subtitle">Concept to closeout.<br>Boots on the ground, advocating for your interests every day.</p>
+    <div class="hero-actions">
+      <a href="/#services" class="btn-primary">Our Services</a>
+      <a href="/#why" class="btn-ghost">Why Vektor</a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════ SERVICES ═══════════════ -->
+<section class="services" id="services">
+  <div class="section-label">What We Do</div>
+  <div class="section-title">Our <em>Services</em></div>
+  <div class="services-grid">
+
+    <a href="/services#pre-construction" class="service-card vk-fade">
+      <svg class="service-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="26" width="30" height="2.5" fill="#0291cf"/>
+        <rect x="9" y="16" width="4" height="10" fill="#0291cf" opacity="0.6"/>
+        <rect x="16" y="10" width="4" height="16" fill="#0291cf"/>
+        <rect x="23" y="19" width="4" height="7" fill="#0291cf" opacity="0.6"/>
+        <path d="M3 17 L11 11 L18 5 L26 13" stroke="#0291cf" stroke-width="1.5" fill="none" stroke-dasharray="3 2" opacity="0.65"/>
+      </svg>
+      <div class="service-name">Pre Construction</div>
+      <p class="service-desc">Front-load risk mitigation before a single dollar is committed. Scope, budget, schedule, and team selection are validated to set your project up for success.</p>
+      <div class="service-link">Learn More</div>
+    </a>
+
+    <a href="/services#construction-mgmt" class="service-card vk-fade vk-fade-delay-1">
+      <svg class="service-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="20" width="7" height="14" fill="#0291cf" opacity="0.55"/>
+        <rect x="14" y="14" width="8" height="20" fill="#0291cf"/>
+        <rect x="24" y="23" width="7" height="11" fill="#0291cf" opacity="0.55"/>
+        <rect x="3" y="33" width="30" height="2" fill="#0291cf"/>
+        <rect x="16" y="4" width="3" height="10" fill="#0291cf" opacity="0.8"/>
+        <rect x="10" y="4" width="9" height="2" fill="#0291cf" opacity="0.8"/>
+      </svg>
+      <div class="service-name">Construction Management</div>
+      <p class="service-desc">Relentless daily oversight of schedule, cost, quality, and safety. Accountability is enforced across all project participants on your behalf.</p>
+      <div class="service-link">Learn More</div>
+    </a>
+
+    <a href="/services#asset-activation" class="service-card vk-fade vk-fade-delay-2">
+      <svg class="service-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="18" cy="18" r="11" stroke="#0291cf" stroke-width="1.5" fill="none"/>
+        <circle cx="18" cy="18" r="4.5" fill="#0291cf"/>
+        <line x1="18" y1="3" x2="18" y2="9" stroke="#0291cf" stroke-width="1.5"/>
+        <line x1="18" y1="27" x2="18" y2="33" stroke="#0291cf" stroke-width="1.5"/>
+        <line x1="3" y1="18" x2="9" y2="18" stroke="#0291cf" stroke-width="1.5"/>
+        <line x1="27" y1="18" x2="33" y2="18" stroke="#0291cf" stroke-width="1.5"/>
+      </svg>
+      <div class="service-name">Asset Activation</div>
+      <p class="service-desc">Systematic commissioning and transition from construction to operations. Your asset performs as designed from day one.</p>
+      <div class="service-link">Learn More</div>
+    </a>
+
+    <a href="/services#project-recovery" class="service-card vk-fade">
+      <svg class="service-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 3 L33 30 L3 30 Z" stroke="#0291cf" stroke-width="1.5" fill="rgba(2,145,207,0.08)"/>
+        <line x1="18" y1="13" x2="18" y2="22" stroke="#0291cf" stroke-width="2"/>
+        <circle cx="18" cy="26" r="1.5" fill="#0291cf"/>
+      </svg>
+      <div class="service-name">Distressed Project Recovery</div>
+      <p class="service-desc">When a project has gone off the rails, root causes are diagnosed in real time and a corrective strategy is implemented to protect your capital.</p>
+      <div class="service-link">Learn More</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ═══════════════ WHY VEKTOR ═══════════════ -->
+<section class="why" id="why">
+  <div class="why-visual">
+    <div class="why-visual-inner">
+      <img class="why-photo" id="gigaPhoto" src="" alt="Gigafactory Berlin — Mega-project scale construction">
+      <div class="why-photo-overlay"></div>
+      <div class="why-corner"></div>
+      <div class="why-corner why-corner-br"></div>
+      <div class="why-caption">
+        <div class="why-caption-text">Gigafactory Berlin-Brandenburg — Mega-Project Scale</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-content">
+    <div class="section-label">The Vektor Difference</div>
+    <div class="section-title">Why <em>Vektor</em></div>
+    <p class="why-body">Capital projects are burdened by a critical misalignment: <strong>everyone on the project is incentivized to maximize their own revenue</strong>, often at the expense of the Owner.</p>
+    <p class="why-body">The construction industry is structurally designed to extract capital through complexity, change orders, delays, and scope creep.</p>
+    <div class="vk-defense-statement">Vektor is your defense against this dynamic.</div>
+    <p class="why-body">The only experts on site with a singular focus: <strong>protecting your investment.</strong> Our staff have executed some of the most complex mega-projects on earth. That deep technical understanding is leveraged to enforce relentless accountability on all project participants.</p>
+    <a href="/#vk-contact" class="btn-primary">Work With Us</a>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section class="contact" id="vk-contact" style="scroll-margin-top: 80px;">
+  <div class="contact-glow"></div>
+  <div class="contact-info">
+    <div class="section-label">Get In Touch</div>
+    <div class="section-title">Interested in<br><em>Working Together?</em></div>
+    <p class="contact-body">Every day without ownership-aligned oversight is a day your capital is at risk.</p>
+  </div>
+  <form class="contact-form" action="https://formspree.io/f/xaqdzwwq" method="POST">
+    <div class="form-row">
+      <div class="form-group">
+        <label>First Name *</label>
+        <input type="text" name="first_name" placeholder="John" required>
+      </div>
+      <div class="form-group">
+        <label>Last Name *</label>
+        <input type="text" name="last_name" placeholder="Smith" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email *</label>
+      <input type="email" name="email" placeholder="john@company.com" required>
+    </div>
+    <div class="form-group">
+      <label>Phone</label>
+      <input type="tel" name="phone" placeholder="(000) 000-0000">
+    </div>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea name="message" placeholder="Tell us about your project..."></textarea>
+    </div>
+    <div class="vk-form-success" style="display:none;">
+      <span>✓ Message sent. We'll be in touch shortly.</span>
+    </div>
+    <button type="submit" class="btn-primary" style="align-self:flex-start;border:none;cursor:pointer;">Send Message</button>
+  </form>
+
+<script>
+// ── BURGER MENU ──
+const burger = document.getElementById('vk-burger');
+const navLinks = document.getElementById('vk-nav-links');
+if (burger && navLinks) {
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+}
+
+// ── SCROLL TO TOP ──
+const scrollBtn = document.getElementById('vk-scroll-top');
+if (scrollBtn) {
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+// ── SCROLL FADE IN ──
+const fadeTargets = document.querySelectorAll(
+  '.vk-chapter, .vk-stat, .vk-mission-body, .vk-quote-text, .vk-quote-accent, ' +
+  '.vk-section-title, .vk-section-label, .vk-mission-sig, .service-card, ' +
+  '.vs-card, .vs-step, .vs-phase-header'
+);
+fadeTargets.forEach((el, i) => {
+  el.classList.add('vk-fade');
+  if (i % 3 === 1) el.classList.add('vk-fade-delay-1');
+  if (i % 3 === 2) el.classList.add('vk-fade-delay-2');
+});
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vk-visible'); fadeObserver.unobserve(e.target); }});
+}, { threshold: 0.1 });
+fadeTargets.forEach(el => fadeObserver.observe(el));
+
+// ── CONTACT FORM (Formspree) ──
+const forms = document.querySelectorAll('.vk-form, .contact-form');
+forms.forEach(form => {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('[type="submit"]');
+    const success = form.querySelector('.vk-form-success');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST', body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        if (success) success.style.display = 'block';
+        btn.textContent = 'Sent';
+      } else {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Error — try again';
+      btn.disabled = false;
+    }
+  });
+});
+</script>
+</section>
+
+<!-- ═══ SCROLL TO TOP ═══ -->
+<button class="vk-scroll-top" id="vk-scroll-top" title="Back to top">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M8 12V4M8 4L4 8M8 4L12 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<!-- ═══ VEKTOR FOOTER ═══ -->
+<footer class="vk-footer">
+  <div class="vk-footer-inner">
+    <div class="vk-footer-brand">
+      <div class="vk-footer-logo">VEKTOR<span>.</span>WORKS</div>
+      <div class="vk-footer-tagline">Owner's Representative · Capital Project Management</div>
+    </div>
+    <div class="vk-footer-links">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="/about">About</a>
+    </div>
+    <div class="vk-footer-contact">
+      <a href="mailto:Info@Vektor.Works">Info@Vektor.Works</a>
+      <a href="tel:9412809100">941-280-9100</a>
+    </div>
+  </div>
+  <div class="vk-footer-bar">
+    <span>© 2026 Vektor Industrial LLC. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+// ── GIGAFACTORY IMAGE ──
+document.getElementById('gigaPhoto').src = '/images/gigafactory-berlin.jpg';
+
+// ── NAV SCROLL STATE ──
+const vekNav = document.getElementById('vk-nav');
+window.addEventListener('scroll', () => {
+  if(vekNav) vekNav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ── HERO PARTICLES ──
+const container = document.getElementById('particles');
+if(container) {
+  for (let i = 0; i < 22; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.cssText = `
+      left:${Math.random()*100}%; top:${Math.random()*100}%;
+      --dx:${(Math.random()-0.5)*180}px; --dy:${-Math.random()*280-40}px;
+      animation-duration:${Math.random()*5+4}s; animation-delay:${Math.random()*8}s;
+      width:${Math.random()*2+1}px; height:${Math.random()*2+1}px;
+    `;
+    container.appendChild(p);
+  }
+}
+
+// ── SMOOTH SCROLL ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+
+// ── CITY WINDOW RANDOMIZATION ──
+// Stagger all the window blinks so they don't pulse in unison
+document.querySelectorAll('.city-win, .city-win-w').forEach(el => {
+  el.style.setProperty('--del', (Math.random() * 8).toFixed(2) + 's');
+  el.style.setProperty('--dur', (Math.random() * 3.5 + 2.5).toFixed(2) + 's');
+});
+
+// ── SCROLL PROGRESS BAR ──
+(function() {
+  const bar = document.createElement('div');
+  bar.className = 'vk-progress-bar';
+  document.body.appendChild(bar);
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+  }, { passive: true });
+})();
+
+// ── NOISE OVERLAY ──
+(function() {
+  const noise = document.createElement('div');
+  noise.className = 'vk-noise-overlay';
+  document.body.appendChild(noise);
+})();
+</script>
+</body>
+</html>

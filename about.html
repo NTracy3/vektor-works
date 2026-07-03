@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Vektor.Works</title>
+  <meta name="description" content="About Vektor.Works — Nathan Tracy, electrical engineer and ex-Tesla Gigafactory construction manager, brings mega-project discipline to owner’s representation and capital project management.">
+  <link rel="canonical" href="https://www.vektor.works/about">
+  <meta property="og:site_name" content="Vektor.Works">
+  <meta property="og:title" content="About — Vektor.Works">
+  <meta property="og:description" content="About Vektor.Works — Nathan Tracy, electrical engineer and ex-Tesla Gigafactory construction manager, brings mega-project discipline to owner’s representation and capital project management.">
+  <meta property="og:url" content="https://www.vektor.works/about">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;0,800;0,900;1,300;1,400;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+
+/* ── KILL SQUARESPACE TOP SPACING ── */
+.sqs-layout .sqs-row .sqs-block:first-child,
+.sqs-block-content,
+[data-block-type="code"],
+.content-wrapper,
+#page,
+#content,
+.page-section:first-of-type,
+.sqs-layout { padding-top: 0 !important; margin-top: 0 !important; }
+:root {
+  --blue: #0291cf; --blue-dark: #0278ac; --blue-dim: rgba(2,145,207,0.12);
+  --grey: #4a4a4a; --black: #0d0d0d; --off-black: #141414;
+  --dark: #1a1a1a; --steel: #222;
+  --white: #f2f2f2; --text-dim: #888; --text-muted: #555;
+}
+
+/* ── PAGE WRAPPER ── */
+.vk-about { background: var(--black); color: var(--white); font-family: 'Roboto Condensed', sans-serif; font-weight: 300; }
+
+/* ── SHARED ── */
+.vk-section-label { font-family: 'Roboto Condensed', sans-serif; font-weight: 400; font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+.vk-section-title { font-family: 'Roboto Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.0; color: var(--white); letter-spacing: -0.01em; margin-bottom: 10px; }
+.vk-section-title em { font-style: normal; color: var(--blue); }
+.vk-divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, rgba(2,145,207,0.3), transparent); }
+.vk-btn { font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; background: var(--blue); color: #fff; padding: 14px 32px; text-decoration: none; transition: background 0.2s; display: inline-block; border: none; cursor: pointer; }
+.vk-btn:hover { background: var(--blue-dark); }
+
+/* ── HERO BANNER ── */
+.vk-hero {
+  background: var(--off-black);
+  padding: 96px 48px 48px; /* top = 32px + 64px nav clearance */
+  position: relative;
+  overflow: hidden;
+  min-height: auto;
+  display: flex; align-items: center;
+}
+.vk-hero-layout {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: center;
+  max-width: 1400px; width: 100%;
+}
+.vk-hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+}
+.vk-hero-right {
+  display: flex; flex-direction: column; justify-content: center;
+  padding-left: 48px;
+  border-left: 1px solid rgba(2,145,207,0.1);
+}
+
+/* ── HERO RETICLE — decorative precision element ── */
+.vk-hero-left { position: relative; }
+.vk-hero-reticle {
+  position: absolute;
+  bottom: -60px; right: -40px;
+  width: 380px; height: 380px;
+  pointer-events: none; z-index: 0;
+  opacity: 0; animation: vkFadeIn 1.2s 0.9s forwards, vkSpin 50s linear infinite;
+  transform-origin: center center;
+}
+.vk-hero-reticle-inner {
+  pointer-events: none;
+  animation: vkSpinReverse 35s linear infinite;
+  transform-origin: center center;
+}
+@keyframes vkFadeIn { from{opacity:0} to{opacity:1} }
+@keyframes vkSpin        { from{transform:rotate(0deg)}   to{transform:rotate(360deg)} }
+@keyframes vkSpinReverse { from{transform:rotate(0deg)}   to{transform:rotate(-360deg)} }
+/* all text children of vk-hero-left sit above the reticle */
+.vk-hero-left > *:not(.vk-hero-reticle) { position: relative; z-index: 1; }
+
+.vk-dossier { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 3px; width: 100%; max-width: 380px; }
+.vk-dossier-label { font-family: 'Roboto Condensed', sans-serif; font-weight: 400; font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; display: block; }
+@keyframes vkSlideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.vk-dossier-item {
+  background: rgba(13,13,13,0.7); border: 1px solid rgba(2,145,207,0.1);
+  border-left: 2px solid rgba(2,145,207,0.4); padding: 14px 18px;
+  display: flex; flex-direction: column; gap: 4px;
+  opacity: 0;
+  animation: vkSlideIn 0.5s ease forwards;
+  transition: border-color 0.3s, background 0.3s;
+}
+.vk-dossier-item:hover { border-left-color: var(--blue); background: rgba(2,145,207,0.05); }
+/* nth-child accounts for divider divs between items:
+   child 2=Tesla, 4=$200M+, 5=20+PMs, 6=7States, 8=Oil&Gas */
+.vk-dossier-item:nth-child(2) { animation-delay: 0.65s; }
+.vk-dossier-item:nth-child(4) { animation-delay: 0.80s; }
+.vk-dossier-item:nth-child(5) { animation-delay: 0.95s; }
+.vk-dossier-item:nth-child(6) { animation-delay: 1.10s; }
+.vk-dossier-item:nth-child(8) { animation-delay: 1.25s; }
+.vk-dossier-stat { font-family: 'Roboto Condensed', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--white); line-height: 1; letter-spacing: -0.01em; }
+.vk-dossier-stat em { font-style: normal; color: var(--blue); }
+.vk-dossier-desc { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); }
+.vk-dossier-divider { height: 1px; background: linear-gradient(to right, rgba(2,145,207,0.25), transparent); margin: 8px 0; }
+.vk-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(2,145,207,0.3), transparent); }
+.vk-hero-grid { position: absolute; inset: 0; opacity: 0.025; background-image: linear-gradient(rgba(2,145,207,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(2,145,207,0.8) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; }
+.vk-hero-content { position: relative; z-index: 2; max-width: 680px; }
+.vk-hero-eyebrow { font-family: 'Roboto Condensed', sans-serif; font-weight: 400; font-size: 0.75rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 18px; opacity: 0; animation: vkFadeUp 0.7s 0.2s forwards; }
+.vk-hero-name { font-family: 'Roboto Condensed', sans-serif; font-weight: 900; font-size: clamp(3rem, 8vw, 5.5rem); line-height: 0.95; color: var(--white); margin-bottom: 6px; opacity: 0; animation: vkFadeUp 0.7s 0.35s forwards; }
+.vk-hero-title { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 28px; opacity: 0; animation: vkFadeUp 0.7s 0.5s forwards; }
+.vk-hero-tagline { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 1.2rem; line-height: 1.65; color: rgba(242,242,242,0.58); max-width: 520px; opacity: 0; animation: vkFadeUp 0.7s 0.65s forwards; }
+@keyframes vkFadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── CAREER TIMELINE ── */
+.vk-timeline { background: var(--black); padding: 64px 48px; }
+.vk-timeline-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; margin-top: 44px; }
+@media(max-width:900px){ .vk-timeline-grid { grid-template-columns: 1fr; } }
+.vk-chapter { background: var(--dark); padding: 38px 32px; position: relative; overflow: hidden; }
+.vk-chapter::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--blue); transform: scaleY(0); transform-origin: top; transition: transform 0.4s; }
+.vk-chapter:hover::before { transform: scaleY(1); }
+.vk-chapter-era { font-family: 'Roboto Condensed', sans-serif; font-weight: 400; font-size: 0.65rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+.vk-chapter-heading { font-family: 'Roboto Condensed', sans-serif; font-weight: 900; font-size: 1.15rem; color: var(--white); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 16px; line-height: 1.2; }
+.vk-chapter-body { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 0.95rem; line-height: 1.75; color: rgba(242,242,242,0.58); }
+.vk-chapter-body strong { color: var(--blue); font-weight: 700; }
+
+/* ── PULL QUOTE ── */
+
+
+/* ── MISSION SECTION ── */
+.vk-mission { background: var(--black); padding: 64px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+@media(max-width:900px){ .vk-mission { grid-template-columns: 1fr; gap: 40px; } }
+.vk-mission-visual { position: relative; }
+.vk-mission-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center 30%; display: block; filter: brightness(0.82) contrast(1.08); }
+.vk-mission-img-placeholder { width: 100%; aspect-ratio: 4/3; background: var(--dark); display: flex; align-items: center; justify-content: center; }
+.vk-mission-corner { position: absolute; top: 14px; left: 14px; width: 22px; height: 22px; border-top: 2px solid var(--blue); border-left: 2px solid var(--blue); z-index: 2; }
+.vk-mission-corner-br { top:auto;left:auto;bottom:14px;right:14px; border-top:none;border-left:none;border-bottom:2px solid var(--blue);border-right:2px solid var(--blue); }
+.vk-mission-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 14px; background: linear-gradient(to top, rgba(13,13,13,0.88), transparent); z-index: 2; }
+.vk-mission-caption span { font-family: 'Roboto Condensed', sans-serif; font-weight: 400; font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,242,242,0.45); }
+.vk-mission-body { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 1rem; line-height: 1.8; color: rgba(242,242,242,0.6); margin-bottom: 18px; }
+.vk-mission-body strong { color: var(--blue); font-weight: 700; }
+.vk-mission-sig { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(74,74,74,0.4); }
+.vk-mission-sig-name { font-family: 'Roboto Condensed', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--white); letter-spacing: 0.04em; text-transform: uppercase; }
+.vk-mission-sig-role { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 0.8rem; color: var(--blue); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+
+/* ── STATS BAR ── */
+.vk-stats { background: var(--off-black); padding: 44px 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+@media(max-width:700px){ .vk-stats { grid-template-columns: 1fr; } }
+.vk-stat { background: var(--dark); padding: 32px 28px; text-align: center; }
+.vk-stat-number { font-family: 'Roboto Condensed', sans-serif; font-weight: 900; font-size: 2.8rem; color: var(--blue); line-height: 1; margin-bottom: 8px; letter-spacing: -0.02em; }
+.vk-stat-label { font-family: 'Roboto Condensed', sans-serif; font-weight: 400; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); }
+
+/* ── CONTACT ── */
+.vk-contact { background: var(--black); padding: 64px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; position: relative; overflow: hidden; }
+.vk-contact-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 0%, rgba(2,145,207,0.05), transparent 60%); pointer-events: none; }
+@media(max-width:900px){ .vk-contact { grid-template-columns: 1fr; gap: 40px; } }
+.vk-contact::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(2,145,207,0.3), transparent); }
+.vk-contact-body { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 1rem; line-height: 1.8; color: rgba(242,242,242,0.52); margin-bottom: 0; margin-top: 16px; }
+.vk-form { display: flex; flex-direction: column; gap: 16px; }
+.vk-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.vk-form-group { display: flex; flex-direction: column; gap: 6px; }
+.vk-form-group label { font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); }
+.vk-form-group input, .vk-form-group textarea { background: var(--dark); border: 1px solid rgba(74,74,74,0.5); color: var(--white); padding: 12px 16px; font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 0.9rem; outline: none; transition: border-color 0.2s; resize: none; width: 100%; }
+.vk-form-group input:focus, .vk-form-group textarea:focus { border-color: var(--blue); }
+.vk-form-group textarea { height: 120px; }
+
+/* ════ MOBILE ════ */
+@media (max-width: 768px) {
+  .vk-hero { padding: 48px 20px 44px; }
+  .vk-hero-name { font-size: clamp(2.8rem, 14vw, 4rem); }
+  .vk-hero-tagline { font-size: 0.95rem; }
+
+  /* ── HERO MOBILE FIX ── */
+  .vk-hero { padding: 88px 20px 36px; min-height: 0; }
+  .vk-hero-layout { grid-template-columns: 1fr; gap: 40px; }
+  .vk-hero-right { padding-left: 0; border-left: none; border-top: 1px solid rgba(2,145,207,0.2); padding-top: 32px; }
+  .vk-dossier { max-width: 100% !important; }
+
+  .vk-timeline { padding: 44px 20px; }
+  .vk-timeline-grid { grid-template-columns: 1fr !important; }
+  .vk-chapter { padding: 28px 22px; }
+
+  .vk-quote { padding: 44px 20px; }
+  .vk-quote-text { font-family: 'Roboto Condensed', sans-serif !important; font-weight: 900 !important; font-size: 2.2rem !important; line-height: 1.4 !important; color: rgba(242,242,242,0.95) !important; font-style: italic !important; max-width: 860px; margin: 0 auto; display: block; }
+
+  .vk-mission { padding: 44px 20px; grid-template-columns: 1fr !important; gap: 32px; }
+  .vk-mission-visual { aspect-ratio: 4/3; }
+
+  .vk-stats { padding: 0; grid-template-columns: 1fr !important; }
+  .vk-stat { padding: 28px 20px; }
+
+  .vk-contact { padding: 44px 20px; grid-template-columns: 1fr !important; gap: 32px; }
+  .vk-form-row { grid-template-columns: 1fr !important; }
+
+  .vk-section-title { font-size: clamp(1.8rem, 8vw, 2.6rem); }
+  .vk-stat-number { font-size: 2.2rem; }
+}
+
+
+/* ── FULL BLEED — escapes Squarespace container ── */
+/* .vk-about wrapper intentionally excluded — overflow-x:hidden on it breaks sticky nav */
+.vs-wrap, .hero, .hero-bg,
+.services, .why, .contact,
+.vk-hero, .vk-timeline, .vk-quote, .vk-mission, .vk-stats, .vk-contact,
+.vs-hero, .vs-phase, .vs-feature, .vs-cta {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  position: relative;
+  left: 50% !important;
+  margin-left: -50vw !important;
+  box-sizing: border-box !important;
+}
+
+
+
+/* ═══ NAV ═══ */
+.vk-nav {
+  position: fixed; top: 0; left: 0;
+  z-index: 1000;
+  background: rgba(13,13,13,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(2,145,207,0.15);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 64px;
+  width: 100%; box-sizing: border-box;
+}
+.vk-nav-logo {
+  font-family: 'Roboto Condensed', sans-serif; font-weight: 900;
+  font-size: 1.05rem; letter-spacing: 0.08em;
+  color: var(--white); text-decoration: none;
+}
+.vk-nav-logo span { color: var(--blue); }
+.vk-nav-links { display: flex; align-items: center; gap: 36px; }
+.vk-nav-links a {
+  font-family: 'Roboto Condensed', sans-serif; font-weight: 400;
+  font-size: 0.85rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(242,242,242,0.65); text-decoration: none;
+  transition: color 0.2s;
+}
+.vk-nav-links a:hover { color: var(--white); }
+.vk-nav-cta {
+  background: var(--blue) !important; color: #fff !important;
+  padding: 9px 22px !important; font-weight: 700 !important;
+  transition: background 0.2s !important;
+}
+.vk-nav-cta:hover { background: var(--blue-dark) !important; }
+.vk-nav-burger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.vk-nav-burger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--white); transition: all 0.3s;
+}
+.vk-nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.vk-nav-burger.open span:nth-child(2) { opacity: 0; }
+.vk-nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ═══ FOOTER ═══ */
+.vk-footer {
+  background: var(--off-black);
+  border-top: 1px solid rgba(2,145,207,0.15);
+  width: 100vw !important; max-width: 100vw !important;
+  left: 50% !important; margin-left: -50vw !important;
+  box-sizing: border-box; position: relative;
+}
+.vk-footer-inner {
+  display: grid; grid-template-columns: 1fr auto auto;
+  gap: 48px; align-items: start;
+  padding: 48px 48px 40px; max-width: 1400px; margin: 0 auto;
+}
+.vk-footer-logo {
+  font-family: 'Roboto Condensed', sans-serif; font-weight: 900;
+  font-size: 1.1rem; letter-spacing: 0.08em; color: var(--white); margin-bottom: 8px;
+}
+.vk-footer-logo span { color: var(--blue); }
+.vk-footer-tagline {
+  font-family: 'Roboto Condensed', sans-serif; font-weight: 300;
+  font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-dim);
+}
+.vk-footer-links, .vk-footer-contact {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.vk-footer-links a, .vk-footer-contact a {
+  font-family: 'Roboto Condensed', sans-serif; font-weight: 300;
+  font-size: 0.88rem; letter-spacing: 0.1em;
+  color: rgba(242,242,242,0.5); text-decoration: none;
+  transition: color 0.2s;
+}
+.vk-footer-links a { text-transform: uppercase; }
+.vk-footer-links a:hover, .vk-footer-contact a:hover { color: var(--blue); }
+.vk-footer-bar {
+  border-top: 1px solid rgba(74,74,74,0.3);
+  padding: 16px 48px; text-align: center;
+}
+.vk-footer-bar span {
+  font-family: 'Roboto Condensed', sans-serif; font-weight: 300;
+  font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(242,242,242,0.25);
+}
+
+/* ═══ NAV + FOOTER MOBILE ═══ */
+@media (max-width: 768px) {
+  .vk-nav { padding: 0 20px; }
+  .vk-nav-links {
+    display: none; flex-direction: column; gap: 0;
+    position: absolute; top: 64px; left: 0; right: 0;
+    background: rgba(13,13,13,0.98);
+    border-bottom: 1px solid rgba(2,145,207,0.15);
+    padding: 16px 0;
+  }
+  .vk-nav-links.open { display: flex; }
+  .vk-nav-links a {
+    padding: 14px 24px; width: 100%;
+    border-bottom: 1px solid rgba(74,74,74,0.2);
+  }
+  .vk-nav-links a:last-child { border-bottom: none; }
+  .vk-nav-cta { margin: 8px 20px !important; padding: 12px 20px !important; text-align: center; }
+  .vk-nav-burger { display: flex; }
+
+  .vk-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px; padding: 40px 20px 32px;
+  }
+  .vk-footer-bar { padding: 16px 20px; }
+}
+
+
+
+.sqs-block-code,
+.sqs-block-code .sqs-block-content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+.vk-nav {
+  margin-top: 0 !important;
+  top: 0 !important;
+}
+
+
+
+.vk-fade { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.vk-fade.vk-visible { opacity: 1; transform: translateY(0); }
+.vk-fade-delay-1 { transition-delay: 0.1s; }
+.vk-fade-delay-2 { transition-delay: 0.2s; }
+.vk-fade-delay-3 { transition-delay: 0.3s; }
+
+/* ── STAT COUNTER ── */
+.vk-stat-number { transition: color 0.3s; }
+
+
+/* ── ACTIVE NAV STATE ── */
+.vk-nav-link[data-active] { color: var(--white) !important; }
+.vk-nav-link[data-active]::after { content: ''; display: block; height: 2px; background: var(--blue); margin-top: 2px; }
+.vk-nav-link { position: relative; }
+.vk-nav-link::after { content: ''; display: block; height: 2px; background: transparent; margin-top: 2px; transition: background 0.2s; }
+.vk-nav-link:hover::after { background: rgba(2,145,207,0.5); }
+
+/* ── SCROLL TO TOP ── */
+.vk-scroll-top {
+  position: fixed; bottom: 32px; right: 32px; z-index: 999;
+  width: 44px; height: 44px; background: var(--blue);
+  border: none; cursor: pointer; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transform: translateY(12px);
+  transition: opacity 0.3s, transform 0.3s, background 0.2s;
+  pointer-events: none;
+}
+.vk-scroll-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.vk-scroll-top:hover { background: var(--blue-dark); }
+
+/* ── FORM SUCCESS ── */
+.vk-form-success {
+  background: rgba(2,145,207,0.1); border: 1px solid rgba(2,145,207,0.3);
+  padding: 14px 18px; font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.85rem; color: var(--blue); letter-spacing: 0.06em;
+}
+
+/* ── QUOTE SECTION (updated) ── */
+.vk-quote { background: var(--off-black); padding: 52px 48px; position: relative; }
+.vk-quote::before, .vk-quote::after { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(2,145,207,0.25), transparent); }
+.vk-quote::before { top: 0; } .vk-quote::after { bottom: 0; }
+.vk-quote-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+.vk-quote-accent { display: block; width: 36px; height: 3px; background: var(--blue); margin: 0 auto 24px; }
+
+/* ── SCROLL ANIMATIONS ── */
+.vk-fade { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.vk-fade.vk-visible { opacity: 1; transform: translateY(0); }
+.vk-fade-delay-1 { transition-delay: 0.1s; }
+.vk-fade-delay-2 { transition-delay: 0.2s; }
+.vk-fade-delay-3 { transition-delay: 0.3s; }
+
+/* ══════════════════════════════════════════════════════════
+   VEKTOR.WORKS UPGRADES v2.0 — ABOUT PAGE
+   ══════════════════════════════════════════════════════════ */
+
+/* ── 1. SCROLL PROGRESS BAR ── */
+.vk-progress-bar {
+  position: fixed; top: 64px; left: 0; width: 0%; height: 2px;
+  background: var(--blue); z-index: 1100;
+  transition: width 0.05s linear; pointer-events: none;
+  box-shadow: 0 0 8px rgba(2,145,207,0.6);
+}
+
+/* ── 2. NOISE TEXTURE OVERLAY ── */
+.vk-noise-overlay {
+  position: fixed; inset: 0; pointer-events: none; z-index: 9998;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px; opacity: 0.028; mix-blend-mode: screen;
+}
+
+/* ── 3. HERO GLOW (top-right ellipse + center orb) ── */
+.vk-hero-glow {
+  position: absolute; top: -20%; right: -10%;
+  width: 65%; height: 140%;
+  background: radial-gradient(ellipse at top right, rgba(2,145,207,0.13), transparent 65%);
+  pointer-events: none;
+}
+.vk-hero-glow-center {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(2,145,207,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── 4. KILL SQUARESPACE GRID EXCESS HEIGHT ── */
+[class*="fe-"] { grid-template-rows: auto !important; height: auto !important; }
+.page-section { height: auto !important; }
+.sqs-layout, .sqs-row, .sqs-col-12, [data-type="code"] { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+.page-section, .sqs-block { padding-bottom: 0 !important; }
+
+/* ── 5. ACTIVE NAV STATE (improved) ── */
+.vk-nav-link { position: relative; }
+.vk-nav-link::after {
+  content: ''; display: block; height: 2px; background: transparent;
+  position: absolute; bottom: -5px; left: 0; right: 0;
+  transition: background 0.2s;
+}
+.vk-nav-link:hover::after { background: rgba(2,145,207,0.45); }
+.vk-nav-link[data-active] { color: var(--white) !important; }
+.vk-nav-link[data-active]::after { background: var(--blue) !important; }
+
+/* ── 6. ROBOTO CONDENSED BODY ── */
+body, .vk-about { font-family: 'Roboto Condensed', sans-serif !important; font-weight: 300 !important; }
+p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-serif; }
+
+</style>
+
+<!-- ═══ VEKTOR NAV — direct code-block child so position:sticky works ═══ -->
+<nav class="vk-nav" id="vk-nav">
+  <a href="/" class="vk-nav-logo">VEKTOR<span>.</span>WORKS</a>
+  <div class="vk-nav-links" id="vk-nav-links">
+    <a href="/" class="vk-nav-link" data-page="home">Home</a>
+    <a href="/services" class="vk-nav-link" data-page="services">Services</a>
+    <a href="/about" class="vk-nav-link" data-page="about" data-active="">About</a>
+    <a href="/about#vk-contact" class="vk-nav-cta">Contact</a>
+  </div>
+  <button class="vk-nav-burger" id="vk-burger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="vk-about">
+
+  <!-- ── HERO BANNER ── -->
+  <div class="vk-hero">
+  <div class="vk-hero-grid"></div>
+  <div class="vk-hero-glow"></div>
+  <div class="vk-hero-glow-center"></div>
+  <div class="vk-hero-layout">
+    <div class="vk-hero-left">
+      <div class="vk-hero-eyebrow">Owner's Representative · Capital Project Management</div>
+      <div class="vk-hero-name">Nathan<br>Tracy</div>
+      <div class="vk-hero-title">Founder &amp; Owner</div>
+      <p class="vk-hero-tagline">Electrical Engineer. Ex-Tesla.<br>The industry insider in your corner.</p>
+      <!-- decorative precision reticle — on-brand for Vektor -->
+      <div class="vk-hero-reticle" aria-hidden="true">
+        <svg viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg" width="380" height="380">
+          <!-- outer ring -->
+          <circle cx="190" cy="190" r="178" stroke="#0291cf" stroke-width="0.75" stroke-opacity="0.18"/>
+          <!-- outer tick marks at 45° -->
+          <line x1="190" y1="12"  x2="190" y2="28"  stroke="#0291cf" stroke-opacity="0.35" stroke-width="1.2"/>
+          <line x1="190" y1="352" x2="190" y2="368" stroke="#0291cf" stroke-opacity="0.35" stroke-width="1.2"/>
+          <line x1="12"  y1="190" x2="28"  y2="190" stroke="#0291cf" stroke-opacity="0.35" stroke-width="1.2"/>
+          <line x1="352" y1="190" x2="368" y2="190" stroke="#0291cf" stroke-opacity="0.35" stroke-width="1.2"/>
+          <line x1="64"  y1="64"  x2="74"  y2="74"  stroke="#0291cf" stroke-opacity="0.25" stroke-width="1"/>
+          <line x1="306" y1="64"  x2="316" y2="74"  stroke="#0291cf" stroke-opacity="0.25" stroke-width="1"/>
+          <line x1="64"  y1="316" x2="74"  y2="306" stroke="#0291cf" stroke-opacity="0.25" stroke-width="1"/>
+          <line x1="306" y1="316" x2="316" y2="306" stroke="#0291cf" stroke-opacity="0.25" stroke-width="1"/>
+          <!-- mid ring (dashed arc segments) -->
+          <circle cx="190" cy="190" r="110" stroke="#0291cf" stroke-width="0.75" stroke-opacity="0.28"
+                  stroke-dasharray="12 8"/>
+          <!-- inner ring (solid) -->
+          <circle cx="190" cy="190" r="52" stroke="#0291cf" stroke-width="1" stroke-opacity="0.4"/>
+          <!-- rotating inner element -->
+          <g class="vk-hero-reticle-inner">
+            <!-- crosshair lines (gap in center) -->
+            <line x1="0"   y1="190" x2="130" y2="190" stroke="#0291cf" stroke-opacity="0.10" stroke-width="0.75"/>
+            <line x1="250" y1="190" x2="380" y2="190" stroke="#0291cf" stroke-opacity="0.10" stroke-width="0.75"/>
+            <line x1="190" y1="0"   x2="190" y2="130" stroke="#0291cf" stroke-opacity="0.10" stroke-width="0.75"/>
+            <line x1="190" y1="250" x2="190" y2="380" stroke="#0291cf" stroke-opacity="0.10" stroke-width="0.75"/>
+            <!-- 4 corner brackets on inner ring -->
+            <path d="M 170 138 L 150 138 L 150 158" stroke="#0291cf" stroke-opacity="0.55" stroke-width="1.2" fill="none"/>
+            <path d="M 210 138 L 230 138 L 230 158" stroke="#0291cf" stroke-opacity="0.55" stroke-width="1.2" fill="none"/>
+            <path d="M 170 242 L 150 242 L 150 222" stroke="#0291cf" stroke-opacity="0.55" stroke-width="1.2" fill="none"/>
+            <path d="M 210 242 L 230 242 L 230 222" stroke="#0291cf" stroke-opacity="0.55" stroke-width="1.2" fill="none"/>
+          </g>
+          <!-- cardinal dots -->
+          <circle cx="190" cy="12"  r="2.5" fill="#0291cf" fill-opacity="0.6"/>
+          <circle cx="190" cy="368" r="2.5" fill="#0291cf" fill-opacity="0.6"/>
+          <circle cx="12"  cy="190" r="2.5" fill="#0291cf" fill-opacity="0.6"/>
+          <circle cx="368" cy="190" r="2.5" fill="#0291cf" fill-opacity="0.6"/>
+          <!-- center dot -->
+          <circle cx="190" cy="190" r="3.5" fill="#0291cf" fill-opacity="0.7"/>
+          <circle cx="190" cy="190" r="8"   stroke="#0291cf" stroke-opacity="0.3" stroke-width="0.75" fill="none"/>
+        </svg>
+      </div>
+    </div>
+    <div class="vk-hero-right">
+      <div class="vk-dossier">
+      <span class="vk-dossier-label">// Field Record</span>
+      <div class="vk-dossier-item">
+        <span class="vk-dossier-stat"><em>Tesla</em> Gigafactory Berlin</span>
+        <span class="vk-dossier-desc">Powertrain Construction Manager</span>
+      </div>
+      <div class="vk-dossier-divider"></div>
+      <div class="vk-dossier-item">
+        <span class="vk-dossier-stat"><em><span data-count="200" data-prefix="$" data-suffix="M+">$200M+</span></em></span>
+        <span class="vk-dossier-desc">Annual CapEx Managed</span>
+      </div>
+      <div class="vk-dossier-item">
+        <span class="vk-dossier-stat"><em>20+</em> Direct Reports</span>
+        <span class="vk-dossier-desc">Project Managers Overseen</span>
+      </div>
+      <div class="vk-dossier-item">
+        <span class="vk-dossier-stat"><em>7</em> States · <em>2</em> Continents</span>
+        <span class="vk-dossier-desc">Career Project Footprint</span>
+      </div>
+      <div class="vk-dossier-divider"></div>
+      <div class="vk-dossier-item">
+        <span class="vk-dossier-stat">Oil &amp; Gas · <em>DoD</em> · EV</span>
+        <span class="vk-dossier-desc">Sectors Delivered</span>
+      </div>
+
+      </div>
+    </div><!-- close vk-hero-right -->
+  </div><!-- close vk-hero-layout -->
+</div><!-- close vk-hero -->
+
+  <div class="vk-divider"></div>
+
+  <!-- ── CAREER TIMELINE ── -->
+  <div class="vk-timeline">
+    <div class="vk-section-label vk-fade">Career</div>
+    <div class="vk-section-title vk-fade vk-fade-delay-1">From the Gulf Coast to <em>Giga Berlin</em></div>
+    <div class="vk-timeline-grid">
+
+      <div class="vk-chapter vk-fade vk-fade-delay-2" style="position:relative;overflow:hidden;">
+        <div style="position:absolute;inset:0;background:url('/images/gigafactory-interior.jpg') center/cover no-repeat;opacity:0.08;pointer-events:none;"></div>
+        <div class="vk-chapter-era">Chapter 01 · The Foundation</div>
+        <div class="vk-chapter-heading">Pipe, Wire &amp; National Security</div>
+        <p class="vk-chapter-body">Started as an Electrical Engineer building <strong>Oil &amp; Gas facilities</strong> along the Gulf Coast. Moved on to power plants in Amish Country and <strong>hypersonic wind tunnels for the DoD</strong>. Across every sector, one truth became clear: without immense pressure, every project drifts toward the same destination: <strong>late and over budget.</strong></p>
+      </div>
+
+      <div class="vk-chapter vk-fade" style="position:relative;overflow:hidden;">
+        <div style="position:absolute;inset:0;background:url('/images/site-drone-overall.jpg') center/cover no-repeat;opacity:0.08;pointer-events:none;"></div>
+        <div class="vk-chapter-era">Chapter 02 · The Tesla Years</div>
+        <div class="vk-chapter-heading">The Tesla Pivot</div>
+        <p class="vk-chapter-body">Switched from contractor to owner's side and joined Tesla at a critical moment: when a missed production target was a potential <strong>death sentence</strong>. Spent six years at Tesla, rising to lead the <strong>Powertrain Construction Team</strong> for Gigafactory Berlin. Managed a team of <strong>20+ Project Managers</strong> deploying over <strong>$200M in annual CapEx</strong>.</p>
+      </div>
+
+      <div class="vk-chapter vk-fade vk-fade-delay-1" style="position:relative;overflow:hidden;">
+        <div style="position:absolute;inset:0;background:url('/images/nathan-site-photo.jpg') center/cover no-repeat;opacity:0.08;pointer-events:none;"></div>
+        <div class="vk-chapter-era">Chapter 03 · The Mission</div>
+        <div class="vk-chapter-heading">Why Vektor Exists</div>
+        <p class="vk-chapter-body">The construction industry is built to extract capital through complexity, change orders, and scope creep. <strong>Everyone on the project is incentivized to maximize their own revenue</strong> at the expense of the Owner. Vektor exists to push back: bringing the <strong>same ownership discipline from Tesla</strong> to protect your investment.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── PULL QUOTE ── -->
+  <div class="vk-quote">
+    <div class="vk-quote-inner">
+      <span class="vk-quote-accent vk-fade vk-fade-delay-2"></span>
+      <div class="vk-quote-text" style="font-family:&#39;Roboto Condensed&#39;,sans-serif;font-weight:900;font-size:2.2rem;line-height:1.4;color:rgba(242,242,242,0.95);font-style:italic;">Without immense pressure, every project drifts toward the same destination: <em>late and over budget.</em></div>
+    </div>
+  </div>
+
+  <!-- ── MISSION + PHOTO ── -->
+  <div class="vk-mission">
+    <div class="vk-mission-visual">
+      <img class="vk-mission-img" id="nathanPhoto" src="/images/nathan-tracy.jpg" alt="Nathan Tracy — Vektor Works">
+      <div class="vk-mission-corner"></div>
+      <div class="vk-mission-corner vk-mission-corner-br"></div>
+      <div class="vk-mission-caption"><span>Gigafactory Berlin-Brandenburg</span></div>
+    </div>
+    <div>
+      <div class="vk-section-label vk-fade">The Vektor Mission</div>
+      <div class="vk-section-title vk-fade vk-fade-delay-1" style="margin-bottom:24px">Your Capital<br><em>Defended</em></div>
+      <p class="vk-mission-body vk-fade vk-fade-delay-2">The natural state of any capital project is to <strong>expand in cost and complexity.</strong> Contractors, subcontractors, vendors — every party at the table is incentivized to grow their slice.</p>
+      <p class="vk-mission-body vk-fade">Vektor is in your corner. We are the <strong>only experts on site with a singular focus</strong> — protecting your investment. We leverage deep technical expertise and the same urgency we lived at Tesla to hold every project participant accountable.</p>
+      <p class="vk-mission-body vk-fade vk-fade-delay-1">From engineering roadblocks and contract disputes to field coordination and system startup, <strong>Vektor has you covered.</strong> One point of contact. Hyper accountability. Advocating for your capital at every phase, every day.</p>
+      <div class="vk-mission-sig vk-fade vk-fade-delay-2">
+        <div class="vk-mission-sig-name">Nathan Tracy</div>
+        <div class="vk-mission-sig-role">Founder &amp; Owner, Vektor.Works</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── STATS BAR ── -->
+  
+
+  <!-- ── CONTACT ── -->
+  <div class="vk-contact" id="vk-contact">
+    <div class="vk-contact-glow"></div>
+    <div>
+      <div class="vk-section-label vk-fade">Get In Touch</div>
+      <div class="vk-section-title vk-fade vk-fade-delay-1">Ready to <em>Defend</em><br>Your Investment?</div>
+      <p class="vk-contact-body">Every day without ownership-aligned oversight is a day your capital is at risk.</p>
+    </div>
+    <form class="vk-form" action="https://formspree.io/f/xaqdzwwq" method="POST">
+      <div class="vk-form-row">
+        <div class="vk-form-group">
+          <label>First Name *</label>
+          <input type="text" name="first_name" placeholder="John" required="">
+        </div>
+        <div class="vk-form-group">
+          <label>Last Name *</label>
+          <input type="text" name="last_name" placeholder="Smith" required="">
+        </div>
+      </div>
+      <div class="vk-form-group">
+        <label>Email *</label>
+        <input type="email" name="email" placeholder="john@company.com" required="">
+      </div>
+      <div class="vk-form-group">
+        <label>Phone</label>
+        <input type="tel" name="phone" placeholder="(000) 000-0000">
+      </div>
+      <div class="vk-form-group">
+        <label>Message</label>
+        <textarea name="message" placeholder="Tell us about your project..."></textarea>
+      </div>
+      <div class="vk-form-success" id="vk-form-success" style="display:none;">
+        <span>✓ Message sent. We'll be in touch shortly.</span>
+      </div>
+      <button type="submit" class="vk-btn">Send Message</button>
+    </form>
+  </div>
+
+<!-- ═══ SCROLL TO TOP ═══ -->
+<button class="vk-scroll-top" id="vk-scroll-top" title="Back to top">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M8 12V4M8 4L4 8M8 4L12 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+</button>
+<!-- ═══ VEKTOR FOOTER ═══ -->
+<footer class="vk-footer">
+  <div class="vk-footer-inner">
+    <div class="vk-footer-brand">
+      <div class="vk-footer-logo">VEKTOR<span>.</span>WORKS</div>
+      <div class="vk-footer-tagline">Owner's Representative · Capital Project Management</div>
+    </div>
+    <div class="vk-footer-links">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="/about">About</a>
+    </div>
+    <div class="vk-footer-contact">
+      <a href="mailto:Info@Vektor.Works">Info@Vektor.Works</a>
+      <a href="tel:9412809100">941-280-9100</a>
+    </div>
+  </div>
+  <div class="vk-footer-bar">
+    <span>© 2026 Vektor Industrial LLC. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+// ── SMOOTH SCROLL for anchor links ──
+document.querySelectorAll('a[href*="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    const hash = href.includes('#') ? '#' + href.split('#')[1] : null;
+    if (!hash || hash === '#') return;
+    const target = document.querySelector(hash);
+    if (!target) return;
+    e.preventDefault();
+    const navHeight = 64;
+    const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+
+// ── BURGER MENU ──
+const burger = document.getElementById('vk-burger');
+const navLinks = document.getElementById('vk-nav-links');
+if (burger && navLinks) {
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+}
+
+// ── SCROLL TO TOP ──
+const scrollBtn = document.getElementById('vk-scroll-top');
+if (scrollBtn) {
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+// ── SCROLL FADE IN ──
+const fadeTargets = document.querySelectorAll(
+  '.vk-chapter, .vk-stat, .vk-mission-body, .vk-quote-accent, ' +
+  '.vk-section-title, .vk-section-label, .vk-mission-sig, .service-card, ' +
+  '.vs-card, .vs-step, .vs-phase-header'
+);
+fadeTargets.forEach((el, i) => {
+  el.classList.add('vk-fade');
+  if (i % 3 === 1) el.classList.add('vk-fade-delay-1');
+  if (i % 3 === 2) el.classList.add('vk-fade-delay-2');
+});
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vk-visible'); fadeObserver.unobserve(e.target); }});
+}, { threshold: 0.1 });
+fadeTargets.forEach(el => fadeObserver.observe(el));
+
+// ── STAT COUNTER ──
+function animateCounter(el, target, suffix, prefix, duration) {
+  let start = null;
+  const step = (ts) => {
+    if (!start) start = ts;
+    const p = Math.min((ts - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = (prefix||'') + Math.floor(eased * target) + (suffix||'');
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target;
+      animateCounter(el, parseFloat(el.dataset.count), el.dataset.suffix || '', el.dataset.prefix || '', 1800);
+      statObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => statObserver.observe(el));
+
+
+// ── DOSSIER ITEMS — animated via CSS keyframes (see .vk-dossier-item) ──
+
+// ── CONTACT FORM (Formspree) ──
+const forms = document.querySelectorAll('.vk-form');
+forms.forEach(form => {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('[type="submit"]');
+    const success = form.querySelector('.vk-form-success');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST', body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        if (success) success.style.display = 'block';
+        btn.textContent = 'Sent';
+      } else {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Error — try again';
+      btn.disabled = false;
+    }
+  });
+});
+
+// ── SCROLL PROGRESS BAR ──
+(function() {
+  const bar = document.createElement('div');
+  bar.className = 'vk-progress-bar';
+  document.body.appendChild(bar);
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+  }, { passive: true });
+})();
+
+// ── NOISE OVERLAY ──
+(function() {
+  const noise = document.createElement('div');
+  noise.className = 'vk-noise-overlay';
+  document.body.appendChild(noise);
+})();
+</script>
+  
+  
+</div>
+</body>
+</html>
