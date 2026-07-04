@@ -5,14 +5,20 @@ Static website for [vektor.works](https://www.vektor.works) — construction con
 ## Structure
 
 ```
-index.html       Home page (includes the Contact section, #vk-contact)
-about.html       About page  (served at /about)
-services.html    Services page (served at /services)
-404.html         Shown for any address that doesn't exist
-favicon.ico      Browser tab icon
-CNAME            Tells GitHub Pages the custom domain (www.vektor.works)
-.nojekyll        Tells GitHub Pages to serve files as-is
-images/          All site photos (previously hosted on Squarespace's servers)
+index.html            Home page (includes the Contact section, #vk-contact)
+about.html            About page  (served at /about)
+services.html         Services page (served at /services)
+404.html              Shown for any address that doesn't exist
+favicon.png           Browser tab icon (square)
+apple-touch-icon.png  Icon when saved to an iPhone home screen
+favicon.ico           Old tab icon, kept for compatibility
+robots.txt            Tells search engines they may index the site
+sitemap.xml           Lists the pages for search engines
+CNAME                 Tells GitHub Pages the custom domain (www.vektor.works)
+.nojekyll             Tells GitHub Pages to serve files as-is
+images/               Site photos. The .webp files are what the pages load;
+                      the .jpg originals are kept as full-quality backups.
+                      og-card.png is the preview image for social shares.
 ```
 
 Each page is fully self-contained: its CSS lives in a `<style>` block and its

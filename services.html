@@ -11,10 +11,16 @@
   <meta property="og:description" content="Vektor.Works services: Pre Construction, Construction Management, Asset Activation, and Distressed Project Recovery. Owner-aligned oversight from first drawing to final payment.">
   <meta property="og:url" content="https://www.vektor.works/services">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="/favicon.ico">
+  <meta property="og:image" content="https://www.vektor.works/images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;0,800;0,900;1,300;1,400;1,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 <style>
@@ -25,6 +31,8 @@
   --white: #f2f2f2; --text-dim: #888;
 }
 
+html { scroll-behavior: smooth; }
+body { background: var(--black); }
 .vs-wrap { background: var(--black); color: var(--white); font-family: 'Roboto Condensed', sans-serif; font-weight: 300; }
 .vs-wrap * { box-sizing: border-box; }
 
@@ -245,14 +253,7 @@
 .vk-footer-links a { text-transform: uppercase; }
 .vk-footer-links a:hover, .vk-footer-contact a:hover { color: var(--blue) !important; }
 .vk-footer-bar { border-top: 1px solid rgba(74,74,74,0.3); padding: 12px 48px; text-align: center !important; display: flex !important; justify-content: center !important; width: 100% !important; clear: both; }
-.vk-footer-bar span { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(242,242,242,0.25); }
-
-/* ── ACTIVE NAV STATE ── */
-.vk-nav-link { position: relative; }
-.vk-nav-link::after { content: ''; display: block; height: 2px; background: transparent; margin-top: 2px; transition: background 0.2s; }
-.vk-nav-link:hover::after { background: rgba(2,145,207,0.5); }
-.vk-nav-link[data-active] { color: var(--white) !important; }
-.vk-nav-link[data-active]::after { background: var(--blue); }
+.vk-footer-bar span { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(242,242,242,0.5); }
 
 /* ── SCROLL TO TOP ── */
 .vk-scroll-top { position: fixed; bottom: 32px; right: 32px; z-index: 999; width: 44px; height: 44px; background: var(--blue); border: none; cursor: pointer; color: #fff; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(12px); transition: opacity 0.3s, transform 0.3s, background 0.2s; pointer-events: none; }
@@ -294,14 +295,6 @@
   .vs-steps { grid-template-columns: 1fr !important; }
 }
 
-.sqs-block-code, .sqs-block-code .sqs-block-content { padding-top: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; margin-bottom: 0 !important; }
-/* ── KILL SQUARESPACE GRID EXCESS HEIGHT ── */
-[class*="fe-"] { grid-template-rows: auto !important; height: auto !important; }
-.page-section { height: auto !important; }
-.sqs-layout, .sqs-row, .sqs-col-12, [data-type="code"] { padding-bottom: 0 !important; margin-bottom: 0 !important; }
-.page-section, .sqs-block { padding-bottom: 0 !important; }
-.vk-nav { margin-top: 0 !important; top: 0 !important; }
-
 /* ══════════════════════════════════════════════════════════
    VEKTOR.WORKS UPGRADES v2.0 — SERVICES PAGE
    ══════════════════════════════════════════════════════════ */
@@ -326,7 +319,6 @@
   opacity: 0.028;
   mix-blend-mode: screen;
 }
- 25%{transform:translate(-4px,2px)} 50%{transform:translate(3px,-3px)} 75%{transform:translate(-2px,-3px)} 100%{transform:translate(0,0)} }
 
 /* ── 5. ROBOTO CONDENSED BODY ── */
 body, .vs-wrap { font-family: 'Roboto Condensed', sans-serif !important; font-weight: 300 !important; }
@@ -343,6 +335,16 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
 .vk-nav-link[data-active] { color: var(--white) !important; }
 .vk-nav-link[data-active]::after { background: var(--blue) !important; }
 
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
 </style>
 
 <div class="vs-wrap">
@@ -356,7 +358,7 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
     <a href="/about" class="vk-nav-link" data-page="about">About</a>
     <a href="#vs-contact" class="vk-nav-cta">Contact</a>
   </div>
-  <button class="vk-nav-burger" id="vk-burger">
+  <button class="vk-nav-burger" id="vk-burger" aria-label="Menu" aria-controls="vk-nav-links">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -370,7 +372,7 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
   <div class="vs-hero-layout">
     <div class="vs-hero-left">
       <span class="vs-hero-eyebrow">Owner's Representative · Capital Project Management</span>
-      <span class="vs-hero-title">How We<br><em>Defend</em><br>Your Capital</span>
+      <h1 class="vs-hero-title">How We<br><em>Defend</em><br>Your Capital</h1>
       <span class="vs-hero-sub">Full-spectrum project management services, structured to protect your investment at every phase.</span>
     </div>
     <div class="vs-hero-right">
@@ -391,20 +393,20 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
     <div class="vs-phase-num">01</div>
     <div>
       <span class="vs-phase-eyebrow">// Phase One</span>
-      <span class="vs-phase-title">Pre Construction</span>
+      <h2 class="vs-phase-title">Pre Construction</h2>
     </div>
   </div>
   <div class="vs-cards">
 
     <div class="vs-card">
-      <span class="vs-card-title">Project Baseline Development</span>
+      <h3 class="vs-card-title">Project Baseline Development</h3>
       <div class="vs-card-body">
         <p>Defining the <strong>Owner's Project Requirements (OPR)</strong> ensures the design team solves the functional problem without "gold-plating." The design process is policed to align scope with the target budget, establishing the <strong>"Source of Truth"</strong> for cost and time that governs every decision downstream.</p>
       </div>
     </div>
 
     <div class="vs-card">
-      <span class="vs-card-title">Constructability Audit</span>
+      <h3 class="vs-card-title">Constructability Audit</h3>
       <div class="vs-card-body">
         <p>A forensic review of the <strong>30%, 60%, and 90% drawing sets</strong> to identify clashes, gaps, and design errors.</p>
         <p>Resolution is forced on paper, before it becomes a Change Order in the field.</p>
@@ -412,7 +414,7 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
     </div>
 
     <div class="vs-card">
-      <span class="vs-card-title">Strategic Procurement</span>
+      <h3 class="vs-card-title">Strategic Procurement</h3>
       <div class="vs-card-body">
         <p>Identification and facilitation of <strong>direct procurement for critical path equipment</strong> — switchgear, chillers, steel — to lock in production slots early.</p>
         <p>Decoupling these items from the GC's critical path <strong>mitigates supply chain risk</strong> and saves money.</p>
@@ -420,14 +422,14 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
     </div>
 
     <div class="vs-card">
-      <span class="vs-card-title">Contract Structure &amp; Negotiation</span>
+      <h3 class="vs-card-title">Contract Structure &amp; Negotiation</h3>
       <div class="vs-card-body">
         <p>Commercial agreements are structured to <strong>eliminate the conflict of interest</strong> inherent in standard construction contracts, aligning Owner and Contractor incentives. Technical scope exhibits close every "grey area" between trades before a contract is signed.</p>
       </div>
     </div>
 
     <div class="vs-card">
-      <span class="vs-card-title">Value Engineering &amp; Descoping</span>
+      <h3 class="vs-card-title">Value Engineering &amp; Descoping</h3>
       <div class="vs-card-body">
         <p>Systematic reduction of project cost without sacrificing performance. Unnecessary specification requirements are stripped out, aligning the design with <strong>"First Principles" functionality.</strong></p>
         <p>Scope reductions are validated against <strong>OPR criteria</strong> to confirm no loss of functional performance.</p>
@@ -435,7 +437,7 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
     </div>
 
     <div class="vs-card">
-      <span class="vs-card-title">Engineering Management</span>
+      <h3 class="vs-card-title">Engineering Management</h3>
       <div class="vs-card-body">
         <p>Coordinating across all engineering disciplines — civil, structural, mechanical, electrical, and process — ensuring each design package is <strong>fully integrated and free of cross-discipline conflicts</strong> before construction begins.</p>
         <p>Strict adherence to Owner requirements is enforced throughout the design process.</p>
@@ -451,20 +453,20 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
     <div class="vs-phase-num">02</div>
     <div>
       <span class="vs-phase-eyebrow">// Phase Two</span>
-      <span class="vs-phase-title">Construction Management</span>
+      <h2 class="vs-phase-title">Construction Management</h2>
     </div>
   </div>
   <div class="vs-cards">
 
     <div class="vs-card">
-      <span class="vs-card-title">Executive Program Management</span>
+      <h3 class="vs-card-title">Executive Program Management</h3>
       <div class="vs-card-body">
         <p>Setting the tone on site and enforcing <strong>hyper accountability</strong> across the General Contractor and Design Team. Acting as central command — enforcing contract compliance and <strong>removing roadblocks before they impact the schedule.</strong></p>
       </div>
     </div>
 
     <div class="vs-card">
-      <span class="vs-card-title">Capital Draw Audits</span>
+      <h3 class="vs-card-title">Capital Draw Audits</h3>
       <div class="vs-card-body">
         <p>Preventing "front-loading" and cash-flow manipulation. Every dollar released is <strong>physically validated against the Schedule of Values (SOV)</strong> to ensure it matches field reality.</p>
         <p><strong>No verification, no payment.</strong></p>
@@ -472,21 +474,21 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
     </div>
 
     <div class="vs-card">
-      <span class="vs-card-title">Change Order Forensics</span>
+      <h3 class="vs-card-title">Change Order Forensics</h3>
       <div class="vs-card-body">
         <p>A granular, technical scrubbing of every potential change order. Root cause analysis <strong>distinguishes legitimate scope gaps from contractor errors,</strong> aggressively rejecting inflated pricing and non-allowable costs.</p>
       </div>
     </div>
 
     <div class="vs-card">
-      <span class="vs-card-title">Critical Path Enforcement</span>
+      <h3 class="vs-card-title">Critical Path Enforcement</h3>
       <div class="vs-card-body">
         <p>The schedule is a project's north star. Tracking logic ties and float degradation in real-time <strong>identifies slippage weeks before it appears on a report,</strong> with acceleration strategies deployed to hold completion dates.</p>
       </div>
     </div>
 
     <div class="vs-card">
-      <span class="vs-card-title">Quality Assurance &amp; Field Engineering</span>
+      <h3 class="vs-card-title">Quality Assurance &amp; Field Engineering</h3>
       <div class="vs-card-body">
         <p>Boots-on-the-ground inspection of critical details: concrete reinforcement, steel connections, and MEP routing. Ensuring the <strong>"as-built" reality matches the "as-designed" intent.</strong></p>
         <p>Sustained field presence creates accountability at every stage, catching deficiencies before they become costly rework.</p>
@@ -494,7 +496,7 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
     </div>
 
     <div class="vs-card">
-      <span class="vs-card-title">RFI Management</span>
+      <h3 class="vs-card-title">RFI Management</h3>
       <div class="vs-card-body">
         <p>Unanswered RFIs are <strong>silent schedule killers.</strong> Driving the full RFI lifecycle — logging, routing, and enforcing response deadlines across the design team.</p>
         <p>Every RFI is scrutinized for scope and cost implications, identifying 2nd and 3rd order consequences before they reach the Owner's desk.</p>
@@ -510,27 +512,27 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
     <div class="vs-phase-num">03</div>
     <div>
       <span class="vs-phase-eyebrow">// Phase Three</span>
-      <span class="vs-phase-title">Asset Activation</span>
+      <h2 class="vs-phase-title">Asset Activation</h2>
     </div>
   </div>
   <div class="vs-cards">
 
     <div class="vs-card">
-      <span class="vs-card-title">Integrated Systems Commissioning</span>
+      <h3 class="vs-card-title">Integrated Systems Commissioning</h3>
       <div class="vs-card-body">
         <p>Vektor, with our Partners, offers Cx consulting services from advisory through full turn-key delivery. Driving <strong>functional performance testing</strong> of mechanical, electrical, and process systems against peak-load design criteria to ensure operational reliability.</p>
       </div>
     </div>
 
     <div class="vs-card">
-      <span class="vs-card-title">Tool Install &amp; SOP Convergence</span>
+      <h3 class="vs-card-title">Tool Install &amp; SOP Convergence</h3>
       <div class="vs-card-body">
         <p>Eliminating the endless scope gaps between the Base Build and the Process. Managing the complex interface between <strong>construction turnover and equipment installation</strong>, ensuring specialty equipment is never stuck waiting for Base Build.</p>
       </div>
     </div>
 
     <div class="vs-card">
-      <span class="vs-card-title">Commercial Closeout &amp; Handover</span>
+      <h3 class="vs-card-title">Commercial Closeout &amp; Handover</h3>
       <div class="vs-card-body">
         <p>Project closeout is the <strong>most critical financial milestone.</strong> Final payment retention is leveraged to force immediate resolution of construction defects, ensuring the warranty period does not begin until all work is approved.</p>
       </div>
@@ -546,7 +548,7 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
     <div class="vs-phase-num">04</div>
     <div>
       <span class="vs-phase-eyebrow">// Phase Four · Emergency Services</span>
-      <span class="vs-phase-title">Distressed Project Recovery</span>
+      <h2 class="vs-phase-title">Distressed Project Recovery</h2>
     </div>
   </div>
   <span class="vs-feature-badge">&#9888; Rapid Response</span>
@@ -555,31 +557,31 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
 
     <div class="vs-step">
       <span class="vs-step-num">01</span>
-      <span class="vs-step-title">Financial Exposure</span>
+      <h3 class="vs-step-title">Financial Exposure</h3>
       <div class="vs-step-body">A full forensic audit of current spend, committed costs, and projected overruns establishes the true financial picture and bounds total exposure.</div>
     </div>
 
     <div class="vs-step">
       <span class="vs-step-num">02</span>
-      <span class="vs-step-title">Root Cause Analysis</span>
+      <h3 class="vs-step-title">Root Cause Analysis</h3>
       <div class="vs-step-body">Tracing the failure back to its origin — whether scope creep, contract structure, poor scheduling, or contractor performance — so the same problems don't recur under a recovery plan.</div>
     </div>
 
     <div class="vs-step">
       <span class="vs-step-num">03</span>
-      <span class="vs-step-title">Recovery Plan</span>
+      <h3 class="vs-step-title">Recovery Plan</h3>
       <div class="vs-step-body">A surgical, Owner-first recovery strategy is built with hard milestones, defined accountability, and clear contractual levers to arrest the overrun and restore project momentum.</div>
     </div>
 
     <div class="vs-step">
       <span class="vs-step-num">04</span>
-      <span class="vs-step-title">Partner Replacement</span>
+      <h3 class="vs-step-title">Partner Replacement</h3>
       <div class="vs-step-body">Where contractors or subcontractors are the root cause, termination, procurement, and onboarding of replacement partners is managed to minimize transition losses and protect schedule.</div>
     </div>
 
     <div class="vs-step">
       <span class="vs-step-num">05</span>
-      <span class="vs-step-title">Re-Baseline</span>
+      <h3 class="vs-step-title">Re-Baseline</h3>
       <div class="vs-step-body">The project schedule and budget are rebuilt from the ground up, establishing a credible new baseline that reflects reality, not optimism, and holds all parties accountable to it.</div>
     </div>
 
@@ -592,32 +594,32 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
   <div class="vs-cta-layout">
     <div class="vs-cta-left">
       <span class="vs-cta-label">// Get In Touch</span>
-      <span class="vs-cta-title">Ready to <em>Defend</em><br>Your Investment?</span>
+      <h2 class="vs-cta-title">Ready to <em>Defend</em><br>Your Investment?</h2>
       <span class="vs-cta-sub">Every day without ownership-aligned oversight is a day your capital is at risk.</span>
     </div>
     <div class="vs-cta-right">
       <form class="contact-form" action="https://formspree.io/f/xaqdzwwq" method="POST">
         <div class="form-row">
           <div class="form-group">
-            <label>First Name *</label>
-            <input type="text" name="first_name" placeholder="John" required>
+            <label for="vk-first">First Name *</label>
+            <input id="vk-first" type="text" name="first_name" placeholder="John" required>
           </div>
           <div class="form-group">
-            <label>Last Name *</label>
-            <input type="text" name="last_name" placeholder="Smith" required>
+            <label for="vk-last">Last Name *</label>
+            <input id="vk-last" type="text" name="last_name" placeholder="Smith" required>
           </div>
         </div>
         <div class="form-group">
-          <label>Email *</label>
-          <input type="email" name="email" placeholder="john@company.com" required>
+          <label for="vk-email">Email *</label>
+          <input id="vk-email" type="email" name="email" placeholder="john@company.com" required>
         </div>
         <div class="form-group">
-          <label>Phone</label>
-          <input type="tel" name="phone" placeholder="(000) 000-0000">
+          <label for="vk-phone">Phone</label>
+          <input id="vk-phone" type="tel" name="phone" placeholder="(000) 000-0000">
         </div>
         <div class="form-group">
-          <label>Message</label>
-          <textarea name="message" placeholder="Tell us about your project..."></textarea>
+          <label for="vk-message">Message</label>
+          <textarea id="vk-message" name="message" placeholder="Tell us about your project..."></textarea>
         </div>
         <div class="vk-form-success" style="display:none;">
           <span>✓ Message sent. We'll be in touch shortly.</span>
@@ -649,7 +651,7 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
     </div>
     <div class="vk-footer-contact">
       <a href="mailto:Info@Vektor.Works">Info@Vektor.Works</a>
-      <a href="tel:9412809100">941-280-9100</a>
+      <a href="tel:+19412809100">941-280-9100</a>
     </div>
   </div>
   <div class="vk-footer-bar">
