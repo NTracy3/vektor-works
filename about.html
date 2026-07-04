@@ -48,7 +48,7 @@ body { background: #0d0d0d; }
 /* ── HERO BANNER ── */
 .vk-hero {
   background: var(--off-black);
-  padding: 32px 48px 48px;
+  padding: 96px 48px 48px; /* top = 32px + 64px fixed-nav clearance */
   position: relative;
   overflow: hidden;
   min-height: auto;
@@ -172,7 +172,7 @@ body { background: #0d0d0d; }
 
 /* ════ MOBILE ════ */
 @media (max-width: 768px) {
-  .vk-hero { padding: 24px 20px 36px; min-height: 0; }
+  .vk-hero { padding: 88px 20px 36px; min-height: 0; }
   .vk-hero-name { font-size: clamp(2.8rem, 14vw, 4rem); }
   .vk-hero-tagline { font-size: 0.95rem; }
   .vk-hero-layout { grid-template-columns: 1fr; gap: 40px; }
@@ -198,7 +198,7 @@ body { background: #0d0d0d; }
 
 /* ═══ NAV ═══ */
 .vk-nav {
-  position: sticky; top: 0;
+  position: fixed; top: 0; left: 0;
   z-index: 1000;
   background: rgba(13,13,13,0.96);
   backdrop-filter: blur(12px);
@@ -550,7 +550,7 @@ p, li, label, input, textarea, button { font-family: 'Roboto Condensed', sans-se
   <!-- ── MISSION + PHOTO ── -->
   <div class="vk-mission">
     <div class="vk-mission-visual">
-      <img class="vk-mission-img" id="nathanPhoto" src="/images/nathan-tracy.webp" width="1200" height="1699" loading="lazy" alt="Nathan Tracy — Vektor Works">
+      <img class="vk-mission-img" id="nathanPhoto" src="/images/nathan-tracy.webp" loading="lazy" alt="Nathan Tracy — Vektor Works">
       <div class="vk-mission-corner"></div>
       <div class="vk-mission-corner vk-mission-corner-br"></div>
       <div class="vk-mission-caption"><span>Gigafactory Berlin-Brandenburg</span></div>
