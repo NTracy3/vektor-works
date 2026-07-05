@@ -68,7 +68,7 @@ body { background: var(--black); color: var(--white); font-family: 'Roboto', san
 @keyframes flyLine { 0%{transform:translateX(-20%) scaleX(0);opacity:0} 15%{opacity:1} 85%{opacity:1} 100%{transform:translateX(20%) scaleX(1.2);opacity:0} }
 .hero-silhouette { position: absolute; bottom: 0; left: 0; right: 0; height: 55%; animation: citySway 24s ease-in-out infinite; }
 .hero-silhouette svg { width: 100%; height: 100%; }
-.hero-glow { position: absolute; bottom: 20%; left: 50%; transform: translateX(-50%); width: 80%; height: 300px; background: radial-gradient(ellipse at center, rgba(2,145,207,0.07) 0%, transparent 70%); pointer-events: none; animation: glowPulse 8s ease-in-out infinite; }
+.hero-glow { position: absolute; bottom: 20%; left: 50%; transform: translateX(-50%); width: 80%; height: 300px; background: radial-gradient(ellipse at center, rgba(2,145,207,0.10) 0%, transparent 70%); pointer-events: none; animation: glowPulse 8s ease-in-out infinite; }
 .hero-scanlines { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px); pointer-events: none; }
 .particles { position: absolute; inset: 0; overflow: hidden; }
 .particle { position: absolute; border-radius: 50%; background: var(--blue); animation: drift linear infinite; opacity: 0; }
@@ -413,11 +413,11 @@ body { background: var(--black); color: var(--white); font-family: 'Roboto', san
       <svg viewBox="0 0 1440 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
         <defs>
           <linearGradient id="bGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#0d1a28"/>
-            <stop offset="100%" stop-color="#0d0d0d"/>
+            <stop offset="0%" stop-color="#17293c"/>
+            <stop offset="100%" stop-color="#101720"/>
           </linearGradient>
           <linearGradient id="glowG" x1="0" y1="1" x2="0" y2="0">
-            <stop offset="0%" stop-color="rgba(2,145,207,0.09)"/>
+            <stop offset="0%" stop-color="rgba(2,145,207,0.14)"/>
             <stop offset="100%" stop-color="transparent"/>
           </linearGradient>
           <linearGradient id="steelGrad" x1="0" y1="0" x2="0" y2="1">
@@ -457,25 +457,25 @@ body { background: var(--black); color: var(--white); font-family: 'Roboto', san
         </g>
 
         <g fill="none" stroke="url(#bGrad)" stroke-width="0">
-          <rect x="1155" y="230" width="110" height="8" fill="#0d1a28"/>
+          <rect x="1155" y="230" width="110" height="8" fill="#1f3950"/>
           <rect x="1155" y="268" width="110" height="8" fill="#0d1520"/>
           <rect x="1155" y="306" width="110" height="8" fill="#0d1520"/>
           <rect x="1155" y="344" width="110" height="8" fill="#0d1520"/>
         </g>
-        <g fill="#0e1c2c">
+        <g fill="#1e3448">
           <rect x="1155" y="195" width="7" height="175"/>
           <rect x="1185" y="220" width="6" height="150"/>
           <rect x="1215" y="220" width="6" height="150"/>
           <rect x="1258" y="195" width="7" height="175"/>
         </g>
-        <g fill="#0c1a28" opacity="0.95">
+        <g fill="#1a3046" opacity="0.95">
           <rect x="1155" y="226" width="110" height="5"/>
           <rect x="1155" y="264" width="110" height="5"/>
           <rect x="1155" y="302" width="110" height="5"/>
           <rect x="1155" y="340" width="110" height="5"/>
           <rect x="1155" y="193" width="110" height="5"/>
         </g>
-        <g stroke="#0e2030" stroke-width="2.5" fill="none" opacity="0.8">
+        <g stroke="#26455e" stroke-width="2.5" fill="none" opacity="0.8">
           <line x1="1162" y1="231" x2="1192" y2="269"/>
           <line x1="1192" y1="231" x2="1162" y2="269"/>
           <line x1="1221" y1="231" x2="1258" y2="269"/>
@@ -493,7 +493,7 @@ body { background: var(--black); color: var(--white); font-family: 'Roboto', san
         <g fill="url(#bGrad)">
           <rect x="588" y="80" width="8" height="260"/>
         </g>
-        <g stroke="#0d1a28" stroke-width="2" fill="none">
+        <g stroke="#1f3950" stroke-width="2" fill="none">
           <line x1="588" y1="80" x2="596" y2="130"/>
           <line x1="596" y1="80" x2="588" y2="130"/>
           <line x1="588" y1="130" x2="596" y2="180"/>
@@ -501,28 +501,32 @@ body { background: var(--black); color: var(--white); font-family: 'Roboto', san
           <line x1="588" y1="180" x2="596" y2="230"/>
           <line x1="596" y1="180" x2="588" y2="230"/>
         </g>
-        <rect x="584" y="86" width="16" height="14" fill="#0d1a28"/>
-        <rect x="488" y="78" width="170" height="6" fill="#0d1a28"/>
-        <rect x="596" y="78" width="65" height="5" fill="#0d1a28"/>
-        <rect x="650" y="83" width="20" height="14" fill="#0c1520"/>
-        <g stroke="#0d1e30" stroke-width="1.5" fill="none">
-          <line x1="592" y1="72" x2="488" y2="84"/>
-          <line x1="592" y1="72" x2="658" y2="83"/>
-          <line x1="592" y1="72" x2="560" y2="84"/>
-          <line x1="592" y1="72" x2="530" y2="84"/>
+        <rect x="584" y="86" width="16" height="14" fill="#1f3950"/>
+        <rect x="488" y="78" width="170" height="6" fill="#1f3950"/>
+        <rect x="596" y="78" width="65" height="5" fill="#1f3950"/>
+        <rect x="650" y="83" width="20" height="14" fill="#1a2c3e"/>
+        <g stroke="#2e5170" stroke-width="2" fill="none">
+          <line x1="588" y1="80" x2="592" y2="54"/>
+          <line x1="596" y1="80" x2="592" y2="54"/>
         </g>
-        <rect x="515" y="74" width="10" height="8" fill="#0c1828"/>
-        <line x1="520" y1="82" x2="520" y2="148" stroke="#0d1e30" stroke-width="1.5"/>
-        <rect x="495" y="148" width="58" height="5" fill="#0d1a28"/>
-        <rect x="495" y="145" width="58" height="3" fill="#0e2030" opacity="0.6"/>
-        <rect x="495" y="152" width="58" height="3" fill="#0e2030" opacity="0.6"/>
-        <line x1="507" y1="148" x2="520" y2="148" stroke="#0d1e30" stroke-width="1.2"/>
-        <line x1="536" y1="148" x2="520" y2="148" stroke="#0d1e30" stroke-width="1.2"/>
+        <g stroke="#2a4c68" stroke-width="1.5" fill="none">
+          <line x1="592" y1="54" x2="490" y2="79"/>
+          <line x1="592" y1="54" x2="656" y2="79"/>
+          <line x1="592" y1="54" x2="530" y2="80"/>
+        </g>
+        <rect x="589" y="51" width="6" height="5" fill="#2e5170"/>
+        <rect x="515" y="74" width="10" height="8" fill="#1d3348"/>
+        <line x1="520" y1="82" x2="520" y2="148" stroke="#26455e" stroke-width="1.5"/>
+        <rect x="495" y="148" width="58" height="5" fill="#1f3950"/>
+        <rect x="495" y="145" width="58" height="3" fill="#26455e" opacity="0.6"/>
+        <rect x="495" y="152" width="58" height="3" fill="#26455e" opacity="0.6"/>
+        <line x1="507" y1="148" x2="520" y2="148" stroke="#26455e" stroke-width="1.2"/>
+        <line x1="536" y1="148" x2="520" y2="148" stroke="#26455e" stroke-width="1.2"/>
 
         <g fill="url(#bGrad)">
           <rect x="1310" y="110" width="7" height="255"/>
         </g>
-        <g stroke="#0d1a28" stroke-width="1.8" fill="none">
+        <g stroke="#1f3950" stroke-width="1.8" fill="none">
           <line x1="1310" y1="110" x2="1317" y2="155"/>
           <line x1="1317" y1="110" x2="1310" y2="155"/>
           <line x1="1310" y1="155" x2="1317" y2="200"/>
@@ -530,24 +534,28 @@ body { background: var(--black); color: var(--white); font-family: 'Roboto', san
           <line x1="1310" y1="200" x2="1317" y2="245"/>
           <line x1="1317" y1="200" x2="1310" y2="245"/>
         </g>
-        <rect x="1307" y="116" width="14" height="12" fill="#0d1a28"/>
-        <rect x="1220" y="108" width="150" height="5" fill="#0d1a28"/>
-        <rect x="1317" y="108" width="55" height="4" fill="#0d1a28"/>
-        <rect x="1362" y="112" width="16" height="12" fill="#0c1520"/>
-        <g stroke="#0d1e30" stroke-width="1.3" fill="none">
-          <line x1="1313" y1="102" x2="1220" y2="113"/>
-          <line x1="1313" y1="102" x2="1372" y2="112"/>
-          <line x1="1313" y1="102" x2="1270" y2="113"/>
-          <line x1="1313" y1="102" x2="1310" y2="113"/>
+        <rect x="1307" y="116" width="14" height="12" fill="#1f3950"/>
+        <rect x="1220" y="108" width="150" height="5" fill="#1f3950"/>
+        <rect x="1317" y="108" width="55" height="4" fill="#1f3950"/>
+        <rect x="1362" y="112" width="16" height="12" fill="#1a2c3e"/>
+        <g stroke="#2e5170" stroke-width="1.8" fill="none">
+          <line x1="1310" y1="110" x2="1313" y2="88"/>
+          <line x1="1317" y1="110" x2="1313" y2="88"/>
         </g>
-        <rect x="1245" y="104" width="9" height="7" fill="#0c1828"/>
-        <line x1="1250" y1="111" x2="1250" y2="185" stroke="#0d1e30" stroke-width="1.3"/>
-        <rect x="1234" y="185" width="34" height="4" fill="#0d1a28"/>
-        <rect x="1234" y="183" width="34" height="2" fill="#0e2030" opacity="0.5"/>
-        <line x1="1243" y1="185" x2="1250" y2="185" stroke="#0d1e30" stroke-width="1"/>
-        <line x1="1259" y1="185" x2="1250" y2="185" stroke="#0d1e30" stroke-width="1"/>
+        <g stroke="#2a4c68" stroke-width="1.3" fill="none">
+          <line x1="1313" y1="88" x2="1222" y2="109"/>
+          <line x1="1313" y1="88" x2="1370" y2="109"/>
+          <line x1="1313" y1="88" x2="1270" y2="110"/>
+        </g>
+        <rect x="1310" y="85" width="6" height="4" fill="#2e5170"/>
+        <rect x="1245" y="104" width="9" height="7" fill="#1d3348"/>
+        <line x1="1250" y1="111" x2="1250" y2="185" stroke="#26455e" stroke-width="1.3"/>
+        <rect x="1234" y="185" width="34" height="4" fill="#1f3950"/>
+        <rect x="1234" y="183" width="34" height="2" fill="#26455e" opacity="0.5"/>
+        <line x1="1243" y1="185" x2="1250" y2="185" stroke="#26455e" stroke-width="1"/>
+        <line x1="1259" y1="185" x2="1250" y2="185" stroke="#26455e" stroke-width="1"/>
 
-        <g fill="#0b1825" opacity="0.75">
+        <g fill="#182a3c" opacity="0.75">
           <rect x="594" y="295" width="4" height="205"/>
           <rect x="614" y="295" width="4" height="205"/>
           <rect x="634" y="295" width="4" height="205"/>
@@ -558,16 +566,16 @@ body { background: var(--black); color: var(--white); font-family: 'Roboto', san
           <rect x="594" y="430" width="44" height="3"/>
           <rect x="594" y="460" width="44" height="3"/>
         </g>
-        <rect x="375" y="488" width="28" height="12" rx="2" fill="#0c1828"/>
-        <rect x="410" y="490" width="18" height="10" rx="1" fill="#0c1828"/>
-        <rect x="875" y="490" width="32" height="10" rx="2" fill="#0c1828"/>
-        <rect x="915" y="488" width="20" height="12" rx="2" fill="#0c1828"/>
-        <rect x="560" y="490" width="40" height="8" fill="#0b1728"/>
-        <rect x="563" y="483" width="34" height="7" fill="#0c1828"/>
-        <rect x="566" y="477" width="28" height="6" fill="#0d1928"/>
+        <rect x="375" y="488" width="28" height="12" rx="2" fill="#1d3348"/>
+        <rect x="410" y="490" width="18" height="10" rx="1" fill="#1d3348"/>
+        <rect x="875" y="490" width="32" height="10" rx="2" fill="#1d3348"/>
+        <rect x="915" y="488" width="20" height="12" rx="2" fill="#1d3348"/>
+        <rect x="560" y="490" width="40" height="8" fill="#182a3c"/>
+        <rect x="563" y="483" width="34" height="7" fill="#1d3348"/>
+        <rect x="566" y="477" width="28" height="6" fill="#1b3042"/>
 
         <!-- Static accent windows (original) -->
-        <g fill="rgba(2,145,207,0.22)">
+        <g fill="rgba(2,145,207,0.32)">
           <rect x="610" y="315" width="6" height="4"/>
           <rect x="623" y="315" width="6" height="4"/>
           <rect x="636" y="315" width="6" height="4"/>
@@ -665,10 +673,10 @@ body { background: var(--black); color: var(--white); font-family: 'Roboto', san
         <rect class="city-win-w" x="1356" y="376" width="5" height="4"/>
 
         <!-- Crane beacon lights -->
-        <circle class="city-beacon" cx="592" cy="69" r="3"/>
-        <circle class="city-beacon" cx="1313" cy="99" r="3" style="--del:1.3s"/>
+        <circle class="city-beacon" cx="592" cy="47" r="3"/>
+        <circle class="city-beacon" cx="1313" cy="81" r="3" style="--del:1.3s"/>
 
-        <rect x="0" y="499" width="1440" height="2" fill="rgba(2,145,207,0.1)"/>
+        <rect x="0" y="499" width="1440" height="2" fill="rgba(2,145,207,0.16)"/>
       </svg>
     </div>
     <div class="hero-glow"></div>
